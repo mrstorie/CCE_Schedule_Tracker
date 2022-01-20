@@ -1,9 +1,9 @@
 class ProgressBar {
-    constructor(startTime, goalTime, barId, statusId){
+    constructor(startTime, goalTime, bar, statusText){
         this.startTime = startTime;
         this.goalTime = goalTime;
-        this.bar = document.getElementById(barId);
-        this.timeLeftStatus = document.getElementById(statusId);
+        this.bar = bar;
+        this.timeLeftStatus = statusText;
     }
 
     setStartTime(startTime){
@@ -66,6 +66,8 @@ class ProgressBar {
 // Show the bar moving over a one minute period
 function testBar(){
     const oneMinute = 1000 * 60;
-    var bar = new ProgressBar(new Date(), new Date(Date.now() + oneMinute * 2), "bar", "time_left_status");
+
+    var progress = document.getElementsByClassName("progress_container");
+    var bar = new ProgressBar(new Date(), new Date(Date.now() + oneMinute * 2), progress[0].firstElementChild, progress[0].lastElementChild);
     bar.startMoving();
 }

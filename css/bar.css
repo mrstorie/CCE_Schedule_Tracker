@@ -1,10 +1,24 @@
-#bar_container {
+.progress_container {
     width: 100%;
+    height: 50px;
     background-color: #000000;
+    border-radius: 5px;
+    position: relative;
 }
 
-#bar {
+.progress_bar {
     width: 10%;
-    height: 50px;
+    height: 100%;
     background-color: #04AA6D;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress_time {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #ffffff;
+    font-size: 30px;
 }

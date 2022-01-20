@@ -23,27 +23,44 @@ class ProgressBar {
         clearInterval(this.interval);
     }
 
+    // Fill in the text with the time left
     static updateTimeLeft(bar, millisLeft){
         if(bar.timeLeftStatus == null){
             return;
         }
+        bar.timeLeftStatus.innerHTML = "";
 
-        var secondsLeft = Math.floor(millisLeft / 1000) + 1;
-        if(secondsLeft < 60){
-            bar.timeLeftStatus.innerHTML = secondsLeft + " seconds";
-            return;
-        }
-
-        // Less than an hour
+        // Extra 1000 make it not go into -1 seconds
+        var secondsLeft = Math.floor((millisLeft + 1000) / 1000);
         var minutesLeft = Math.floor(secondsLeft / 60);
-        if(minutesLeft < 60){
-            bar.timeLeftStatus.innerHTML = minutesLeft + " minutes";
+        var hoursLeft = Math.floor(minutesLeft/60);
+
+        // Only seconds left, no need to print the others
+        if(secondsLeft < 60){
+            bar.timeLeftStatus.innerHTML = secondsLeft + " second";
+            if(secondsLeft != 1){
+                bar.timeLeftStatus.innerHTML += "s"
+            }
+
             return;
         }
 
-        var hoursLeft = Math.floor(minutesLeft/60);
-        var leftOverMinutes = minutesLeft - hoursLeft * 60;
-        bar.timeLeftStatus.innerHTML = hoursLeft + " hours and " + leftOverMinutes + " minutes";
+        // Hour
+        if(minutesLeft > 59){
+            bar.timeLeftStatus.innerHTML = hoursLeft + " hour";
+            if(hoursLeft != 1){
+                bar.timeLeftStatus.innerHTML += "s";
+            }
+            minutesLeft = minutesLeft - hoursLeft * 60;
+        }
+
+        // Always place minutes regardless of hour, unless 0
+        if(minutesLeft > 0){
+            bar.timeLeftStatus.innerHTML += " " + minutesLeft + " minute";
+            if(minutesLeft != 1){
+                bar.timeLeftStatus.innerHTML += "s"
+            }
+        }
     }
 
     // Convert the dates into miliseconds, then get a percentage completion
@@ -68,6 +85,6 @@ function testBar(){
     const oneMinute = 1000 * 60;
 
     var progress = document.getElementsByClassName("progress_container");
-    var bar = new ProgressBar(new Date(), new Date(Date.now() + oneMinute * 2), progress[0].firstElementChild, progress[0].lastElementChild);
+    var bar = new ProgressBar(new Date(), new Date(Date.now() + oneMinute * 3), progress[0].firstElementChild, progress[0].lastElementChild);
     bar.startMoving();
 }

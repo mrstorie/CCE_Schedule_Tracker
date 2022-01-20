@@ -28,7 +28,7 @@ class ProgressBar {
             return;
         }
 
-        var secondsLeft = Math.floor(millisLeft / 1000);
+        var secondsLeft = Math.floor(millisLeft / 1000) + 1;
         if(secondsLeft < 60){
             bar.timeLeftStatus.innerHTML = secondsLeft + " seconds";
             return;

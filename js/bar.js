@@ -1,17 +1,16 @@
 class ProgressBar {
-    constructor(startTime, goalTime, bar, statusText){
-        this.startTime = startTime;
-        this.goalTime = goalTime;
+    constructor(bar, statusText, schedule){
         this.bar = bar;
         this.timeLeftStatus = statusText;
+        this.schedule = schedule;
     }
 
-    setStartTime(startTime){
-        this.startTime = startTime;
+    getSchedule(){
+        return this.schedule;
     }
 
-    setEndTime(endTime){
-        this.endTime = endTime;
+    setSchedule(schedule){
+        this.schedule = schedule;
     }
 
     startMoving(){
@@ -65,8 +64,8 @@ class ProgressBar {
 
     // Convert the dates into miliseconds, then get a percentage completion
     static updateBar(bar) {
-        var start = bar.startTime.getTime();
-        var end = bar.goalTime.getTime();
+        var start = bar.schedule.getCurrentStart().getTime();
+        var end = bar.schedule.getCurrentEnd().getTime();
         var length = end - start;
         var elapsed = Date.now() - start;
 
@@ -80,11 +79,32 @@ class ProgressBar {
     }
 }
 
+class Schedule {
+    constructor(startTime, endTime){
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.name = "Period 6";
+    }
+
+    getCurrentStart(){
+        return this.startTime;
+    }
+
+    getCurrentEnd(){
+        return this.endTime;
+    }
+
+    getCurrentName(){
+        return this.name;
+    }
+}
+
 // Show the bar moving over a one minute period
 function testBar(){
     const oneMinute = 1000 * 60;
 
+    var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
     var progress = document.getElementsByClassName("progress_container");
-    var bar = new ProgressBar(new Date(), new Date(Date.now() + oneMinute * 3), progress[0].firstElementChild, progress[0].lastElementChild);
+    var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, schedule);
     bar.startMoving();
 }

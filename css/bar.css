@@ -2,6 +2,11 @@ body{
     background-color: #000000;
 }
 
+.title{
+    color: #38761d;
+    
+}
+
 .progress_container {
     width: 100%;
     height: 50px;

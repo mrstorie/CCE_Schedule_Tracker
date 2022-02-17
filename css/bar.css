@@ -1,17 +1,54 @@
 body{
-    background-color: #000000;
+    background-image: url(../images/MVHS-Clock-02.PNG);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.title_container{
+    margin-bottom: 25vh;
 }
 
 .title{
     color: #38761d;
-    
+    background: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    width: 100vw;
+    font-size: 100px;
+    margin: 0;
+}
+
+.text_container{
+    /* background: rgba(255, 255, 255, 0.75); */
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.date{
+    color: #38761d;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 25px;
+}
+
+.period{
+    color: #38761d;
+    float: right;
+    margin-right: 25px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 0px 20px 0px 20px;
+    border-radius: 25px;
 }
 
 .progress_container {
-    width: 100%;
-    height: 50px;
+    width: 75%;
+    margin: auto;
+    height: 75px;
     background-color: #bdaa70ff;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
 }
 
@@ -19,7 +56,7 @@ body{
     width: 10%;
     height: 100%;
     background-color: #38761d;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
 }
 

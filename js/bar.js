@@ -130,9 +130,9 @@ function testBar(){
 }
 
 function changeDate(){
-    let today = new Date().toDateString('en-BG');
+    let todayDate = new Date().toDateString('en-BG');
 
-    document.getElementById('date').textContent = today;
+    document.getElementById('date').textContent = todayDate;
 }
 
 document.addEventListener("DOMContentLoaded", changeDate);

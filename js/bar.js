@@ -20,6 +20,8 @@ class ProgressBar {
 
     endOfInterval(){
         clearInterval(this.interval);
+        this.schedule.nextPeriod();
+        this.startMoving();
     }
 
     // Fill in the text with the time left
@@ -79,11 +81,23 @@ class ProgressBar {
     }
 }
 
+// csv: startTime;Name;endTime,<next entry> (24-hour time)
+// ex: 7:34;Period 1;8:28
 class Schedule {
-    constructor(startTime, endTime){
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.name = "Period 6";
+    constructor(str){
+        this.periods = str.split(",");
+        this.pIndex = 0;
+        this.updateTimes();
+    }
+
+    updateTimes(){
+        var parts = this.periods[this.pIndex].split(";");
+        var start = parts[0].split(":");
+        var end = parts[2].split(":");
+
+        var now = new Date();
+        this.startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), start[0], start[1]);
+        this.endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), end[0], end[1]);
     }
 
     getCurrentStart(){
@@ -97,13 +111,19 @@ class Schedule {
     getCurrentName(){
         return this.name;
     }
+
+    nextPeriod(){
+        this.pIndex++;
+        this.updateTimes();
+    }
 }
 
 // Show the bar moving over a one minute period
 function testBar(){
     const oneMinute = 1000 * 60;
 
-    var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
+    //var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
+    var schedule = new Schedule("13:35;Period 6;13:39,13:39;Period 7;15:00");
     var progress = document.getElementsByClassName("progress_container");
     var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, schedule);
     bar.startMoving();

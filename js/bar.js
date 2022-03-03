@@ -57,7 +57,7 @@ class ProgressBar {
         if(minutesLeft > 0){
             bar.timeLeftStatus.innerHTML += " " + minutesLeft + " minute";
             if(minutesLeft != 1){
-                bar.timeLeftStatus.innerHTML += "s"
+                bar.timeLeftStatus.innerHTML += "s";
             }
         }
     }
@@ -108,3 +108,11 @@ function testBar(){
     var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, schedule);
     bar.startMoving();
 }
+
+function changeDate(){
+    let today = new Date().toDateString('en-BG');
+
+    document.getElementById('date').textContent = today;
+}
+
+document.addEventListener("DOMContentLoaded", changeDate);

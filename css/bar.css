@@ -11,27 +11,33 @@ body{
 
 .title_container{
     margin-bottom: 25vh;
+    background: rgba(255, 255, 255, 0.75);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 40px;
 }
 
 .title{
     color: #38761d;
-    background: rgba(255, 255, 255, 0.75);
     text-align: center;
     width: 100vw;
-    font-size: 100px;
     margin: 0;
 }
 
 .text_container{
     /* background: rgba(255, 255, 255, 0.75); */
     font-weight: bold;
-    font-size: 100px;
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .date{
     color: #38761d;
     background: rgba(255, 255, 255, 0.75);
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .period{

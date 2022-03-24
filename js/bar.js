@@ -1,7 +1,9 @@
 class ProgressBar {
-    constructor(bar, statusText, schedule){
+    constructor(bar, statusText, container, title, schedule){
         this.bar = bar;
+        this.container = container;
         this.timeLeftStatus = statusText;
+        this.title = title;
         this.schedule = schedule;
     }
 
@@ -71,6 +73,15 @@ class ProgressBar {
         var length = end - start;
         var elapsed = Date.now() - start;
 
+        // Nothing to do right now: make blank
+        if(Date.now() < start){
+            bar.container.style.display = "none";
+            return;
+        }
+        bar.container.style.display = "block";
+
+        bar.title.innerHTML = bar.schedule.getCurrentName();
+
         ProgressBar.updateTimeLeft(bar, end - Date.now());
         bar.bar.style.width = (elapsed/length * 100) + "%"; 
 
@@ -94,6 +105,8 @@ class Schedule {
         var parts = this.periods[this.pIndex].split(";");
         var start = parts[0].split(":");
         var end = parts[2].split(":");
+
+        this.name = parts[1];
 
         var now = new Date();
         this.startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), start[0], start[1]);
@@ -123,9 +136,10 @@ function testBar(){
     const oneMinute = 1000 * 60;
 
     //var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
-    var schedule = new Schedule("13:35;Period 6;13:39,13:39;Period 7;15:00");
+    var schedule = new Schedule("13:35;Period 6;13:39,14:20;Period 7;15:00");
     var progress = document.getElementsByClassName("progress_container");
-    var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, schedule);
+    var titles = document.getElementsByClassName("period");
+    var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule);
     bar.startMoving();
 }
 

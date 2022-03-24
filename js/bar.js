@@ -135,4 +135,9 @@ function changeDate(){
     document.getElementById('date').textContent = todayDate;
 }
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", changeDate);
+=======
+window.addEventListener('DOMContentLoaded', changeDate);
+setInterval(changeDate, 60000);
+>>>>>>> 33bde873c47385c993afcd82312ba3c19667b070

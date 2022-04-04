@@ -21,6 +21,7 @@ class ProgressBar {
     }
 
     endOfInterval(){
+        this.container.style.display = "none";
         clearInterval(this.interval);
         this.schedule.nextPeriod();
         this.startMoving();
@@ -135,8 +136,12 @@ class Schedule {
 function testBar(schedule){
     const oneMinute = 1000 * 60;
 
+<<<<<<< HEAD
     //var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
     //var schedule = new Schedule("13:35;Period 6;13:39,14:20;Period 7;15:00");
+=======
+    var schedule = new Schedule("13:35;Period 6;13:39,13:45;Period 7;13:49");
+>>>>>>> 3764b7703967e5a6a1a77942938af3d090b03660
     var progress = document.getElementsByClassName("progress_container");
     var titles = document.getElementsByClassName("period");
     var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule);

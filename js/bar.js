@@ -136,12 +136,6 @@ class Schedule {
 function testBar(schedule){
     const oneMinute = 1000 * 60;
 
-<<<<<<< HEAD
-    //var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
-    //var schedule = new Schedule("13:35;Period 6;13:39,14:20;Period 7;15:00");
-=======
-    var schedule = new Schedule("13:35;Period 6;13:39,13:45;Period 7;13:49");
->>>>>>> 3764b7703967e5a6a1a77942938af3d090b03660
     var progress = document.getElementsByClassName("progress_container");
     var titles = document.getElementsByClassName("period");
     var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule);
@@ -167,11 +161,7 @@ function dateSchedule(){
 	case 5://Friday
 		console.log("Normal");
 		var schedule = new Schedule("7:34;Period 1;8:28,8:28;Passing Period;8:32,8:32;Period 2;9:26,9:26;Passing Period;9:30,9:30;Period 3;10:24,10:24;Passing Period;10:28,10:28;Period 4;11:22,11:22;A Lunch;11:56,11:56;Passing Period;12:00,12:00;Period 5;12:54,12:54;Passing Period;12:58,12:58;Period 6;13:52,13:52;Passing Period;13:56,13:56;Period 7;14:50");
-		console.log(now.getTime());
-		if(now.getHours() == 7 && now.getMinutes() == 34){
-			testBar(schedule);
-			console.log("running");
-		}
+		testBar(schedule);
 		break;
 	case 3://Wednesday
 		console.log("Odd Block");

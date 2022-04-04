@@ -132,11 +132,11 @@ class Schedule {
 }
 
 // Show the bar moving over a one minute period
-function testBar(){
+function testBar(schedule){
     const oneMinute = 1000 * 60;
 
     //var schedule = new Schedule(new Date(), new Date(Date.now() + oneMinute));
-    var schedule = new Schedule("13:35;Period 6;13:39,14:20;Period 7;15:00");
+    //var schedule = new Schedule("13:35;Period 6;13:39,14:20;Period 7;15:00");
     var progress = document.getElementsByClassName("progress_container");
     var titles = document.getElementsByClassName("period");
     var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule);
@@ -151,3 +151,32 @@ function changeDate(){
 
 window.addEventListener('DOMContentLoaded', changeDate);
 setInterval(changeDate, 60000);
+
+function dateSchedule(){
+    var now = new Date();
+    var weekDay = now.getDay();
+
+    switch(weekDay){
+	case 1://Monday
+	case 2://Tuesday
+	case 5://Friday
+		console.log("Normal");
+		var schedule = new Schedule("7:34;Period 1;8:28,8:28;Passing Period;8:32,8:32;Period 2;9:26,9:26;Passing Period;9:30,9:30;Period 3;10:24,10:24;Passing Period;10:28,10:28;Period 4;11:22,11:22;A Lunch;11:56,11:56;Passing Period;12:00,12:00;Period 5;12:54,12:54;Passing Period;12:58,12:58;Period 6;13:52,13:52;Passing Period;13:56,13:56;Period 7;14:50");
+		console.log(now.getTime());
+		if(now.getHours() == 7 && now.getMinutes() == 34){
+			testBar(schedule);
+			console.log("running");
+		}
+		break;
+	case 3://Wednesday
+		console.log("Odd Block");
+		break;
+	case 4://Thursday
+		console.log("Even Block");
+		break;
+    }
+}
+
+window.addEventListener('DOMContentLoaded', dateSchedule);
+setInterval(dateSchedule, 1000*60*60*24);
+

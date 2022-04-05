@@ -56,7 +56,7 @@ body{
 .progress_container {
     width: 75%;
     margin: auto;
-    height: 75px;
+    height: 100px;
     background-color: #bdaa70ff;
     border-radius: 10px;
     position: relative;

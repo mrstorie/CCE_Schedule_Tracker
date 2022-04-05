@@ -133,7 +133,7 @@ class Schedule {
 }
 
 // Show the bar moving over a one minute period
-function testBar(schedule){
+function bar(schedule){
     const oneMinute = 1000 * 60;
 
     var progress = document.getElementsByClassName("progress_container");
@@ -161,13 +161,15 @@ function dateSchedule(){
 	case 5://Friday
 		console.log("Normal");
 		var schedule = new Schedule("7:34;Period 1;8:28,8:28;Passing Period;8:32,8:32;Period 2;9:26,9:26;Passing Period;9:30,9:30;Period 3;10:24,10:24;Passing Period;10:28,10:28;Period 4;11:22,11:22;A Lunch;11:56,11:56;Passing Period;12:00,12:00;Period 5;12:54,12:54;Passing Period;12:58,12:58;Period 6;13:52,13:52;Passing Period;13:56,13:56;Period 7;14:50");
-		testBar(schedule);
+		bar(schedule);
 		break;
 	case 3://Wednesday
 		console.log("Odd Block");
+		var schedule = new Schedule("7:53;Period 1;9:25,9:25;Passing Period;9:30,9:30;Period 3;11:02,11:02;A Lunch;11:36,11:36;Passing Period;11:41,11:41;Period 5;13:13,13:13;Passing Period;13:18,13:18;Period 7;14:50");
 		break;
 	case 4://Thursday
 		console.log("Even Block");
+		var schedule = new Schedule("7:34;SOAR;8:55,8:55;Passing Period;9:00,9:00;Advisement;9:25,9:25;Passing Period;9:30,9:30;Period 2;11:02,11:02;A Lunch;11:36,11:36;Passing Period;11:41,11:41;Period 4;13:13,13:13;Passing Period;13:18,13:18;Period 6;14:50")
 		break;
     }
 }

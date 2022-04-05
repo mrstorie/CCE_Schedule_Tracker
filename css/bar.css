@@ -42,6 +42,10 @@ body{
     padding: 10px;
 }
 
+.bar-placeholder{
+    padding: 10px;
+}
+
 .period{
     color: #38761d;
     float: right;

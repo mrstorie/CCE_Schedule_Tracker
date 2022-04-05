@@ -22,6 +22,7 @@ class ProgressBar {
 
     endOfInterval(){
         this.container.style.display = "none";
+        this.title.style.display = "none";
         clearInterval(this.interval);
         this.schedule.nextPeriod();
         this.startMoving();
@@ -77,9 +78,11 @@ class ProgressBar {
         // Nothing to do right now: make blank
         if(Date.now() < start){
             bar.container.style.display = "none";
+            bar.title.style.display = "none";
             return;
         }
         bar.container.style.display = "block";
+        bar.title.style.display = "block";
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 
@@ -133,13 +136,16 @@ class Schedule {
 }
 
 // Show the bar moving over a one minute period
-function bar(schedule){
+function startBar(schedule){
     const oneMinute = 1000 * 60;
 
     var progress = document.getElementsByClassName("progress_container");
     var titles = document.getElementsByClassName("period");
-    var bar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule);
-    bar.startMoving();
+    var topBar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule[0]);
+    topBar.startMoving();
+
+    var bottomBar = new ProgressBar(progress[1].firstElementChild, progress[1].lastElementChild, progress[1], titles[1], schedule[1]);
+    bottomBar.startMoving();
 }
 
 function changeDate(){
@@ -154,14 +160,15 @@ setInterval(changeDate, 60000);
 function dateSchedule(){
     var now = new Date();
     var weekDay = now.getDay();
+    var schedule = [null, null];
 
     switch(weekDay){
 	case 1://Monday
 	case 2://Tuesday
 	case 5://Friday
 		console.log("Normal");
-		var schedule = new Schedule("7:34;Period 1;8:28,8:28;Passing Period;8:32,8:32;Period 2;9:26,9:26;Passing Period;9:30,9:30;Period 3;10:24,10:24;Passing Period;10:28,10:28;Period 4;11:22,11:22;A Lunch;11:56,11:56;Passing Period;12:00,12:00;Period 5;12:54,12:54;Passing Period;12:58,12:58;Period 6;13:52,13:52;Passing Period;13:56,13:56;Period 7;14:50");
-		bar(schedule);
+		schedule[0] = new Schedule("7:34;Period 1;8:28,8:28;Passing Period;8:32,8:32;Period 2;9:26,9:26;Passing Period;9:30,9:30;Period 3;10:24,10:24;Passing Period;10:28,10:28;Period 4;11:22,11:22;A Lunch;11:56,11:56;Passing Period;12:00,12:00;Period 5;12:54,12:54;Passing Period;12:58,12:58;Period 6;13:52,13:52;Passing Period;13:56,13:56;Period 7;14:50");
+                schedule[1] = new Schedule("16:30;Period 69;16:50");
 		break;
 	case 3://Wednesday
 		console.log("Odd Block");
@@ -172,6 +179,8 @@ function dateSchedule(){
 		var schedule = new Schedule("7:34;SOAR;8:55,8:55;Passing Period;9:00,9:00;Advisement;9:25,9:25;Passing Period;9:30,9:30;Period 2;11:02,11:02;A Lunch;11:36,11:36;Passing Period;11:41,11:41;Period 4;13:13,13:13;Passing Period;13:18,13:18;Period 6;14:50")
 		break;
     }
+
+    startBar(schedule);
 }
 
 window.addEventListener('DOMContentLoaded', dateSchedule);

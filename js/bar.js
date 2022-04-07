@@ -185,18 +185,44 @@ function dateSchedule(){
     startBar(schedule);
 }
 
-window.addEventListener('DOMContentLoaded', dateSchedule);
-//window.addEventListener('DOMContentLoaded', getSchedules);
+window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(dateSchedule, 1000*60*60*24);
 
 function getSchedules(){
     var request = new XMLHttpRequest();
+    var weekDay = new Date().getDay();
     
+    //Grab latest schedule
     const hostname = window.location.hostname;
     request.open("GET", "/api/schedules.json");
     request.send();
 
     request.onload = function () {
-        console.log(request.responseText);
+        var obj = JSON.parse(request.responseText);
+        var index = 0;
+
+        //get right day
+        switch(weekDay){
+            case 1://Monday
+            case 2://Tuesday
+            case 5://Friday
+                index = 0;
+
+            case 3://Wednesday
+                index = 1;
+
+            case 4://Thursday
+                index = 2;
+        }
+
+        var schedule = [];
+        schedule[0] = new Schedule(obj.schedules[index].times[0]);
+        schedule[1] = new Schedule(obj.schedules[index].times[1]);
+        startBar(schedule);
+    }
+
+    //Fallback schedules
+    request.onerror = function () {
+        dateSchedule();
     }
 }

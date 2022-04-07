@@ -183,6 +183,18 @@ function dateSchedule(){
     startBar(schedule);
 }
 
-window.addEventListener('DOMContentLoaded', dateSchedule);
+//window.addEventListener('DOMContentLoaded', dateSchedule);
+window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(dateSchedule, 1000*60*60*24);
 
+function getSchedules(){
+    var request = new XMLHttpRequest();
+    
+    const hostname = window.location.hostname;
+    request.open("GET", "/api/schedules.json");
+    request.send();
+
+    request.onload = function () {
+        console.log(request.responseText);
+    }
+}

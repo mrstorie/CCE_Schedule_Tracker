@@ -1,0 +1,9 @@
+{
+    "schedules": [
+        "date": "normal",
+        "times": [
+            "7:34;Period 1;8:28,8:28;Passing Period;8:32,8:32;Period 2;9:26,9:26;Passing Period;9:30,9:30;Period 3;10:24,10:24;Passing Period;10:28,10:28;Period 4;11:22,11:22;A Lunch;11:56,11:56;Passing Period;12:00,12:00;Period 5;12:54,12:54;Passing Period;12:58,12:58;Period 6;13:52,13:52;Passing Period;13:56,13:56;Period 7;14:50",
+            "16:30;Period 69;16:50"
+        ]
+    ]
+}

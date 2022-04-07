@@ -185,8 +185,8 @@ function dateSchedule(){
     startBar(schedule);
 }
 
-//window.addEventListener('DOMContentLoaded', dateSchedule);
-window.addEventListener('DOMContentLoaded', getSchedules);
+window.addEventListener('DOMContentLoaded', dateSchedule);
+//window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(dateSchedule, 1000*60*60*24);
 
 function getSchedules(){

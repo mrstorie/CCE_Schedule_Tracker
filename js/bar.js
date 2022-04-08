@@ -195,7 +195,7 @@ function getSchedules(){
     
     //Grab latest schedule
     const hostname = window.location.hostname;
-    request.open("GET", "/api/schedules.json");
+    request.open("GET", "api/schedules.json");
     request.send();
 
     request.onload = function () {

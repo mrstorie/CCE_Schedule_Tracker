@@ -213,12 +213,15 @@ function getSchedules(){
             case 2://Tuesday
             case 5://Friday
                 index = 0;
+                break;
 
             case 3://Wednesday
                 index = 1;
+                break;
 
             case 4://Thursday
                 index = 2;
+                break;
         }
 
         //Special day

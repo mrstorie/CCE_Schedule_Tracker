@@ -10,13 +10,13 @@ body{
 }
 
 .title_container{
-    margin-bottom: 25vh;
+    margin-bottom: 10vh;
     background: rgba(255, 255, 255, 0.75);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .title{
@@ -28,10 +28,10 @@ body{
 
 .text_container{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 4vw;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
-    padding-bottom: 35px;
+    padding-bottom: 4vw;
 }
 
 .date{
@@ -60,7 +60,7 @@ body{
 .progress_container {
     width: 75%;
     margin: auto;
-    height: 100px;
+    height: 8vw;
     background-color: #bdaa70ff;
     border-radius: 10px;
     position: relative;
@@ -72,6 +72,13 @@ body{
     background-color: #38761d;
     border-radius: 10px;
     overflow: hidden;
+    background: repeating-linear-gradient(to right, green 0%, olive 50%, green 100%);
+    width: 100%;
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: gradient 5s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
 
 .progress_time {
@@ -79,6 +86,12 @@ body{
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    color: #ffffff;
-    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+@keyframes gradient { 
+  0%   { background-position: 0 0; }
+  100% { background-position: -200% 0; }
 }

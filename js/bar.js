@@ -190,7 +190,8 @@ setInterval(dateSchedule, 1000*60*60*24);
 
 function getSchedules(){
     var request = new XMLHttpRequest();
-    var weekDay = new Date().getDay();
+    var now = new Date();
+    var weekDay = now.getDay();
     
     //Grab latest schedule
     const hostname = window.location.hostname;
@@ -198,6 +199,11 @@ function getSchedules(){
     request.send();
 
     request.onload = function () {
+        if(request.status === 404){
+            dateSchedule();
+            return;
+        }
+
         var obj = JSON.parse(request.responseText);
         var index = 0;
 
@@ -213,6 +219,15 @@ function getSchedules(){
 
             case 4://Thursday
                 index = 2;
+        }
+
+        //Special day
+        var dateStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear();
+        for(var i = 0; i < obj.schedules.length; i++){
+            if(obj.schedules[i].date == dateStr){
+                index = i;
+                break;
+            }
         }
 
         var schedule = [];

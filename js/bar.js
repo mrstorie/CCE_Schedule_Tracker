@@ -185,6 +185,59 @@ function dateSchedule(){
     startBar(schedule);
 }
 
-window.addEventListener('DOMContentLoaded', dateSchedule);
+window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(dateSchedule, 1000*60*60*24);
 
+function getSchedules(){
+    var request = new XMLHttpRequest();
+    var now = new Date();
+    var weekDay = now.getDay();
+    
+    //Grab latest schedule
+    const hostname = window.location.hostname;
+    request.open("GET", "api/schedules.json");
+    request.send();
+
+    request.onload = function () {
+        if(request.status === 404){
+            dateSchedule();
+            return;
+        }
+
+        var obj = JSON.parse(request.responseText);
+        var index = 0;
+
+        //get right day
+        switch(weekDay){
+            case 1://Monday
+            case 2://Tuesday
+            case 5://Friday
+                index = 0;
+
+            case 3://Wednesday
+                index = 1;
+
+            case 4://Thursday
+                index = 2;
+        }
+
+        //Special day
+        var dateStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear();
+        for(var i = 0; i < obj.schedules.length; i++){
+            if(obj.schedules[i].date == dateStr){
+                index = i;
+                break;
+            }
+        }
+
+        var schedule = [];
+        schedule[0] = new Schedule(obj.schedules[index].times[0]);
+        schedule[1] = new Schedule(obj.schedules[index].times[1]);
+        startBar(schedule);
+    }
+
+    //Fallback schedules
+    request.onerror = function () {
+        dateSchedule();
+    }
+}

@@ -1,0 +1,4 @@
+# Put this into the home directory of the pi as ".xprofile"
+
+unclutter -idle 0 &
+chromium-browser --start-fullscreen https://hooperwf1.github.io/MVHS_Schedule_Tracker/

@@ -3,8 +3,8 @@
 mkdir -p $HOME/.config/autostart
 
 # Download files
-/usr/bin/wget https://hooperwf1.gitub.io/MVHS_Schedule_Tracker/tools/kiosk.sh -O $HOME/kiosk.sh
-/usr/bin/wget https://hooperwf1.gitub.io/MVHS_Schedule_Tracker/tools/kiosk.desktop -O $HOME/.config/autostart/kiosk.desktop
+/usr/bin/wget https://hooperwf1.github.io/MVHS_Schedule_Tracker/tools/kiosk.sh -O $HOME/kiosk.sh
+/usr/bin/wget https://hooperwf1.github.io/MVHS_Schedule_Tracker/tools/kiosk.desktop -O $HOME/.config/autostart/kiosk.desktop
 sudo apt install unclutter
 /usr/bin/chmod a+x $HOME/kiosk.sh
 

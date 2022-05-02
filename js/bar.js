@@ -185,9 +185,6 @@ function dateSchedule(){
     startBar(schedule);
 }
 
-window.addEventListener('DOMContentLoaded', getSchedules);
-setInterval(dateSchedule, 1000*60*60*24);
-
 function getSchedules(){
     var request = new XMLHttpRequest();
     var now = new Date();
@@ -244,3 +241,18 @@ function getSchedules(){
         dateSchedule();
     }
 }
+
+function reloadPage(hour){
+    const hours24 = 1000 * 60 * 60 * 24;
+    var date = new Date(Date.now() + hours24); 
+    date.setHours(hour);
+    time = date.getTime() - Date.now();
+
+    setTimeout(function() {
+        location.reload();
+    }, time);
+}
+
+window.addEventListener('DOMContentLoaded', getSchedules);
+setInterval(getSchedules, 1000*60*60*24);
+reloadPage(7);

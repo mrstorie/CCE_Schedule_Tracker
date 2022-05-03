@@ -149,7 +149,7 @@ function startBar(schedule){
 }
 
 function changeDate(){
-    let todayDate = new Date().toDateString('en-BG');
+    let todayDate = new Date().toLocaleDateString('en-BG', {weekday:"long",  year:"numeric", month:"short", day:"numeric"});
 
     document.getElementById('date').textContent = todayDate;
 }

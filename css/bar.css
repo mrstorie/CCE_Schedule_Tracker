@@ -28,6 +28,17 @@ body{
     margin: 0;
 }
 
+.end{
+    color: #38761d;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+}
+
 .text_container{
     font-weight: bold;
     font-size: 4vw;

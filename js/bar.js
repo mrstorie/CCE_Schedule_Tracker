@@ -185,9 +185,6 @@ function dateSchedule(){
     startBar(schedule);
 }
 
-window.addEventListener('DOMContentLoaded', getSchedules);
-setInterval(dateSchedule, 1000*60*60*24);
-
 function getSchedules(){
     var request = new XMLHttpRequest();
     var now = new Date();
@@ -213,12 +210,15 @@ function getSchedules(){
             case 2://Tuesday
             case 5://Friday
                 index = 0;
+                break;
 
             case 3://Wednesday
                 index = 1;
+                break;
 
             case 4://Thursday
                 index = 2;
+                break;
         }
 
         //Special day
@@ -241,3 +241,18 @@ function getSchedules(){
         dateSchedule();
     }
 }
+
+function reloadPage(hour){
+    const hours24 = 1000 * 60 * 60 * 24;
+    var date = new Date(Date.now() + hours24); 
+    date.setHours(hour);
+    time = date.getTime() - Date.now();
+
+    setTimeout(function() {
+        location.reload();
+    }, time);
+}
+
+window.addEventListener('DOMContentLoaded', getSchedules);
+setInterval(getSchedules, 1000*60*60*24);
+reloadPage(7);

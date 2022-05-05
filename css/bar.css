@@ -37,6 +37,7 @@ body{
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
     font-weight: bold;
+    display: none;
 }
 
 .text_container{

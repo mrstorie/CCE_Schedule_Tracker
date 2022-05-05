@@ -83,6 +83,7 @@ class ProgressBar {
         }
         bar.container.style.display = "block";
         bar.title.style.display = "block";
+	document.getElementById('end').style.display = "none";
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 

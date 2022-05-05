@@ -202,24 +202,7 @@ function getSchedules(){
         }
 
         var obj = JSON.parse(request.responseText);
-        var index = 0;
-
-        //get right day
-        switch(weekDay){
-            case 1://Monday
-            case 2://Tuesday
-            case 5://Friday
-                index = 0;
-                break;
-
-            case 3://Wednesday
-                index = 1;
-                break;
-
-            case 4://Thursday
-                index = 2;
-                break;
-        }
+        var index = -1;
 
         //Special day
         var dateStr = now.getMonth()+1 + "/" + now.getDate() + "/" + now.getFullYear();
@@ -228,6 +211,11 @@ function getSchedules(){
                 index = i;
                 break;
             }
+        }
+
+        if(index == -1){
+            dateSchedule();
+            return;
         }
 
         var schedule = [];

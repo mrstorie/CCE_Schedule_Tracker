@@ -83,6 +83,7 @@ class ProgressBar {
         }
         bar.container.style.display = "block";
         bar.title.style.display = "block";
+	document.getElementById('end').style.display = "none";
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 
@@ -149,7 +150,7 @@ function startBar(schedule){
 }
 
 function changeDate(){
-    let todayDate = new Date().toDateString('en-BG');
+    let todayDate = new Date().toLocaleDateString('en-BG', {weekday:"long",  year:"numeric", month:"short", day:"numeric"});
 
     document.getElementById('date').textContent = todayDate;
 }

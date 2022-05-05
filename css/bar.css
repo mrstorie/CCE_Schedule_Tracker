@@ -1,5 +1,5 @@
 body{
-    background-image: url(../images/MVHS-Clock-02.PNG);
+    background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #87B37A, #77867F);
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -7,6 +7,8 @@ body{
     background-position: center center;
     overflow: hidden;
     margin: 0;
+    /*background-size: 400% 400%;
+    animation: gradient2 15s ease infinite;*/
 }
 
 .title_container{
@@ -24,6 +26,18 @@ body{
     text-align: center;
     width: 100vw;
     margin: 0;
+}
+
+.end{
+    color: #38761d;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    display: none;
 }
 
 .text_container{
@@ -44,6 +58,13 @@ body{
 
 .bar-placeholder{
     padding: 10px;
+}
+
+.names{
+	color: ;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 .period{
@@ -94,4 +115,10 @@ body{
 @keyframes gradient { 
   0%   { background-position: 0 0; }
   100% { background-position: -200% 0; }
+}
+
+@keyframes gradient2 {
+	0% { background-position: 0% 50%}
+	50% { background-position: 100% 50%}
+	100% { background-position: 0% 50%}
 }

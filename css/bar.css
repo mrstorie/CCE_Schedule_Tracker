@@ -7,8 +7,6 @@ body{
     background-position: center center;
     overflow: hidden;
     margin: 0;
-    /*background-size: 400% 400%;
-    animation: gradient2 15s ease infinite;*/
 }
 
 .title_container{
@@ -33,11 +31,18 @@ body{
     background: rgba(255, 255, 255, 0.75);
     border-radius: 15px;
     text-align: center;
-    font-size: 4vw;
+    font-size: 7vw;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
     font-weight: bold;
+    display: table;
+    margin: 0 auto;
+    width: 60vw;
     display: none;
+}
+
+.end_container{
+    margin-top: 11vh;
 }
 
 .text_container{

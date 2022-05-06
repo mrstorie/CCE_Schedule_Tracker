@@ -23,6 +23,7 @@ class ProgressBar {
     endOfInterval(){
         this.container.style.display = "none";
         this.title.style.display = "none";
+	document.getElementById('end').style.display = "block";
         clearInterval(this.interval);
         this.schedule.nextPeriod();
         this.startMoving();
@@ -79,6 +80,7 @@ class ProgressBar {
         if(Date.now() < start){
             bar.container.style.display = "none";
             bar.title.style.display = "none";
+	    document.getElementById('end').style.display = "block";
             return;
         }
         bar.container.style.display = "block";

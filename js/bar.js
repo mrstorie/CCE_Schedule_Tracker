@@ -21,9 +21,9 @@ class ProgressBar {
     }
 
     endOfInterval(){
+	document.getElementById('end').style.display = "block";
         this.container.style.display = "none";
         this.title.style.display = "none";
-	document.getElementById('end').style.display = "block";
         clearInterval(this.interval);
         this.schedule.nextPeriod();
         this.startMoving();
@@ -75,12 +75,20 @@ class ProgressBar {
         var end = bar.schedule.getCurrentEnd().getTime();
         var length = end - start;
         var elapsed = Date.now() - start;
+	var endFullTime = bar.schedule.getFullEnd().getTime();
+
+	//Ending Add
+	if(Date.now() >= endFullTime){
+	    document.getElementById('end').style.display = "block";
+	    console.log("end of interval");
+	    console.log(endFullTime);
+	    console.log(Date.now());
+	}	
 
         // Nothing to do right now: make blank
         if(Date.now() < start){
             bar.container.style.display = "none";
             bar.title.style.display = "none";
-	    document.getElementById('end').style.display = "block";
             return;
         }
         bar.container.style.display = "block";
@@ -112,12 +120,15 @@ class Schedule {
         var parts = this.periods[this.pIndex].split(";");
         var start = parts[0].split(":");
         var end = parts[2].split(":");
+	var endPart = this.periods[this.periods.length - 1].split(";"); 
+	var endTimePart = endPart[2].split(":");
 
         this.name = parts[1];
 
         var now = new Date();
         this.startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), start[0], start[1]);
         this.endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), end[0], end[1]);
+        this.endTimeFull = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endTimePart[0], endTimePart[1]);
     }
 
     getCurrentStart(){
@@ -130,6 +141,10 @@ class Schedule {
 
     getCurrentName(){
         return this.name;
+    }
+
+    getFullEnd(){
+	return this.endTimeFull;
     }
 
     nextPeriod(){

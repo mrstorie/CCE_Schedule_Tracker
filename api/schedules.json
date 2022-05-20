@@ -1,10 +1,10 @@
 {
     "schedules": [
         {
-            "date": "4/9/2022",
+            "date": "5/20/2022",
             "times": [
-                "7:34;Odd Schedule;14:50",
-                "11:02;Passing Period;11:07,11:07;Period 4;12:39,12:39;B Lunch;13:13"
+                "7:53;Even Schedule;14:50",
+                "11:02;Passing Period;11:07,11:07;Period 5;12:39,12:39;B Lunch;13:13"
             ]
         },
         {
@@ -16,3 +16,5 @@
         }
     ]
 }
+
+

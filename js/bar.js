@@ -190,6 +190,7 @@ function dateSchedule(){
 
 	case 3://Wednesday
         schedule[0] = new Schedule("7:34;SOAR;9:05,9:06;Passing Period;9:09,9:10;Period 2;10:40,10:41;Passing Period;10:44,10:45;Period 1;12:15")
+	schedule[1] = new Schedule("12:16;Finals Schedule;23:59");
         break;
 		    
 	/*

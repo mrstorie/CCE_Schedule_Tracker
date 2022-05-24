@@ -182,15 +182,14 @@ function dateSchedule(){
 
     switch(weekDay){
 	case 1://Monday
-        schedule[0] = new Schedule("7:34;SOAR;9:05,9:06;Passing Period;9:09,9:10;Period 7;10:40,10:41;Passing Period;10:44,10:45;Period 6;12:15")
+        schedule[0] = new Schedule("7:34;SOAR;9:05,9:05;Passing Period;9:09,9:09;Period 7;10:40,10:40;Passing Period;10:45,10:45;Period 6;12:15")
         break;
 	case 2://Tuesday
-        schedule[0] = new Schedule("7:34;Period 5;9:05,9:06;Passing Period;9:09,9:10;Period 4;10:40,10:41;Passing Period;10:44,10:45;Period 3;12:15")
+        schedule[0] = new Schedule("7:34;Period 5;9:05,9:05;Passing Period;9:10,9:10;Period 4;10:40,10:40;Passing Period;10:45,10:45;Period 3;12:15")
         break;
 
 	case 3://Wednesday
-        schedule[0] = new Schedule("7:34;SOAR;9:05,9:06;Passing Period;9:09,9:10;Period 2;10:40,10:41;Passing Period;10:44,10:45;Period 1;12:15")
-	schedule[1] = new Schedule("12:16;Finals Schedule;23:59");
+        schedule[0] = new Schedule("7:34;SOAR;9:05,9:05;Passing Period;9:10,9:10;Period 2;10:40,10:40;Passing Period;10:45,10:45;Period 1;12:15")
         break;
 		    
 	/*

@@ -161,9 +161,8 @@ function startBar(schedule){
     var titles = document.getElementsByClassName("period");
     var topBar = new ProgressBar(progress[0].firstElementChild, progress[0].lastElementChild, progress[0], titles[0], schedule[0]);
     topBar.startMoving();
-	
-    //var bottomBar = new ProgressBar(progress[1].firstElementChild, progress[1].lastElementChild, progress[1], titles[1], schedule[1]);
-    //bottomBar.startMoving();
+    var bottomBar = new ProgressBar(progress[1].firstElementChild, progress[1].lastElementChild, progress[1], titles[1], schedule[1]);
+    bottomBar.startMoving();
 }
 
 function changeDate(){

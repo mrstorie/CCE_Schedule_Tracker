@@ -86,7 +86,7 @@ body{
 .progress_container {
     width: 75%;
     margin: auto;
-    height: 8vw;
+    height: 7vw;
     background-color: #bdaa70ff;
     border-radius: 10px;
     position: relative;
@@ -124,7 +124,7 @@ body{
     border-bottom-right-radius: 25px;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
     margin: 0;
 
 }

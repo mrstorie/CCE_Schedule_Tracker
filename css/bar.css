@@ -10,7 +10,7 @@ body{
 }
 
 .title_container{
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
     background: rgba(255, 255, 255, 0.75);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -118,14 +118,14 @@ body{
 }
 
 #clock {
-    margin-bottom: 10vh;
     color: #38761d;
     text-align: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
-    font-size: 3vw;
+    font-size: 2vw;
+    margin: 0;
 
 }
 

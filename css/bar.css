@@ -117,6 +117,18 @@ body{
     font-size: 4vw;
 }
 
+#clock {
+    margin-bottom: 10vh;
+    color: #38761d;
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 3vw;
+
+}
+
 @keyframes gradient { 
   0%   { background-position: 0 0; }
   100% { background-position: -200% 0; }

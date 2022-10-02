@@ -240,8 +240,8 @@ case 3://Wednesday
         break;
 
 case 4://Thursday
-        schedule[0] = new Schedule("7:30;Teacher PLC;8:00,8:00;Period 1;9:30,9:30;Passing Period;9:35,9:35;Period 3;11:05,11:05;A Lunch;11:40,11:40;Passing Period;11:45,11:45;Period 5;13:15,13:15;Passing Period;13:20,13:20;Period 7;14:50");
-        schedule[1] = new Schedule("11:05;Passing Period;11:10,11:10;Period 5;12:40,12:40;B Lunch;13:15");
+        schedule[0] = new Schedule("7:30;Teacher PLC;8:00,8:00;Period 1;9:30,9:30;Passing Period;9:35,9:35;Period 3;11:05,11:05;A-Taste of Vista;11:40,11:40;Passing Period;11:45,11:45;Period 5;13:15,13:15;Passing Period;13:20,13:20;Period 7;14:50");
+        schedule[1] = new Schedule("11:05;Passing Period;11:10,11:10;Period 5;12:40,12:40;B-Taste of Vista;13:15");
         break;
     
 case 5://Friday

@@ -236,7 +236,8 @@ case 2://Tuesday
 
 case 3://Wednesday
         schedule[0] = new Schedule("7:15;Testing;11:30,11:30;Lunch;12:16,12:16;Passing Period;12:21,12:21;Period 6;13:33,13:33;Passing Period;13:38,13:38;Period 7;14:50");
-        break;
+        schedule[1] = new Schedule("7:15;Testing;11:30");
+	break;
 
 case 4://Thursday
         schedule[0] = new Schedule("7:45;Period 1;8:57,8:57;Passing Period;9:02,9:02;Period 2;10:14,10:14;Passing Period;10:19,10:19;Period 3;11:31,11:31;A Lunch;12:16,12:16;Passing Period;12:21,12:21;Period 4;13:33,13:33;Passing Period;13:38,13:38;Period 5;14:50");

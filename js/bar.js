@@ -200,7 +200,7 @@ function dateSchedule(){
 		break;
 		
 ************************22 bell schedule**************
-
+*/
 	case 1://Monday
 		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7;14:50");
 		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
@@ -219,19 +219,14 @@ function dateSchedule(){
 		schedule[0] = new Schedule("7:30;Teacher PLC;8:00,8:00;Period 2;9:30,9:30;Passing Period;9:35,9:35;Advisement;10:05,10:05;EAGLE TIME;11:05,11:05;A Lunch;11:40,11:40;Passing Period;11:45,11:45;Period 4;13:15,13:15;Passing Period;13:20,13:20;Period 6;14:50")
 		schedule[1] = new Schedule("11:05;Passing Period;11:10,11:10;Period 4;12:40,12:40;B Lunch;13:15");
 		break;
-*/	
-	case 1://Friday Late Start
-		schedule[0] = new Schedule("7:30;Delayed Start;9:15,9:15;Period 1;9:53,9:53;Passing Period;9:58,9:58;Period 2;10:36,10:36;Passing Period;10:41,10:41;Period 3;11:19,11:19;Passing Period;11:24,11:24;Period 4;12:02,12:024;A Lunch;12:41,12:41;Passing Period;12:46,12:46;Period 5;13:24,13:24;Passing Period;13:29,13:29;Period 6;14:07,14:07;Passing Period;14:12,14:12;Period 7;14:50");
-		schedule[1] = new Schedule("12:02;Passing Period;12:07,12:07;Period 5;12:45,12:45;B Lunch;13:24");
-		break;
 
-	 /*Testing 22 
-	case 5://Normal Friday
-		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7 test;14:50");
-		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
-		break;
+	case 5://Friday late start
+    schedule[0] = new Schedule("7:30;Delayed Start;9:15,9:15;Period 1;9:53,9:53;Passing Period;9:58,9:58;Period 2;10:36,10:36;Passing Period;10:41,10:41;Period 3;11:19,11:19;Passing Period;11:24,11:24;Period 4;12:02,12:024;A Lunch;12:41,12:41;Passing Period;12:46,12:46;Period 5;13:24,13:24;Passing Period;13:29,13:29;Period 6;14:07,14:07;Passing Period;14:12,14:12;Period 7;14:50");
+    schedule[1] = new Schedule("12:02;Passing Period;12:07,12:07;Period 5;12:45,12:45;B Lunch;13:24");
+    break;
+
 		}
-	
+	/*Testing 22 
 	case 1://Monday
 		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7;14:50");
 		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
@@ -240,18 +235,16 @@ function dateSchedule(){
 		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7;14:50");
 		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
 		break;
-
 	case 3://Wednesday
 		schedule[0] = new Schedule("7:15;Testing;11:30,11:30;Lunch;12:16,12:16;Passing Period;12:21,12:21;Period 6;13:33,13:33;Passing Period;13:38,13:38;Period 7;14:50");
 		schedule[1] = new Schedule("7:15;Testing;11:30");
 		break;
-
 	case 4://Thursday
 		schedule[0] = new Schedule("7:45;Period 1;8:57,8:57;Passing Period;9:02,9:02;Period 2;10:14,10:14;Passing Period;10:19,10:19;Period 3;11:31,11:31;A Lunch;12:16,12:16;Passing Period;12:21,12:21;Period 4;13:33,13:33;Passing Period;13:38,13:38;Period 5;14:50");
 		schedule[1] = new Schedule("11:31;Passing Period;11:36,11:36;Period 4;12:48,12:48;B Lunch;13:33");
 		break;
     
-	case 1://Friday
+	case 5://Friday
 		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7 test;14:50");
 		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
 		break;

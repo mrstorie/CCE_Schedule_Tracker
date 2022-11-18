@@ -220,8 +220,8 @@ function dateSchedule(){
 		schedule[1] = new Schedule("11:05;Passing Period;11:10,11:10;Period 4;12:40,12:40;B Lunch;13:15");
 		break;
 	
-	case 5://Thursday
-		schedule[0] = new Schedule("7:30;Delayed Start-Period 1 begins at 9:15;9:15,9:15;Period 1;9:53,9:53;Passing Period;9:58,9:58;Period 2;10:36,10:36;Passing Period;10:41,10:41;Period 3;11:19,11:19;Passing Period;11:24,11:24;Period 4;12:02,12:024;A Lunch;12:41,12:41;Passing Period;12:46,12:46;Period 5;13:24,13:24;Passing Period;13:29,13:29;Period 6;14:07,14:07;Passing Period;14:12,14:12;Period 7;14:50");
+	case 5://Friday Late Start
+		schedule[0] = new Schedule("7:30;Delayed Start;9:15,9:15;Period 1;9:53,9:53;Passing Period;9:58,9:58;Period 2;10:36,10:36;Passing Period;10:41,10:41;Period 3;11:19,11:19;Passing Period;11:24,11:24;Period 4;12:02,12:024;A Lunch;12:41,12:41;Passing Period;12:46,12:46;Period 5;13:24,13:24;Passing Period;13:29,13:29;Period 6;14:07,14:07;Passing Period;14:12,14:12;Period 7;14:50");
 		schedule[1] = new Schedule("12:02;Passing Period;12:07,12:07;Period 5;12:45,12:45;B Lunch;13:24");
 		break;
 

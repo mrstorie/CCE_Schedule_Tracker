@@ -230,14 +230,14 @@ function dateSchedule(){
 		    
 	    
 	case 1://Monday
-		schedule[0] = new Schedule("7:30;Teacher Office Hours-Finals Week;7:45,7:45;Eagle time;9:15,9:15;Passing Period;9:20,9:20;Period 1;10:50,10:50;Passing Period;10:55,10:55;Period 2;12:25");
+		schedule[0] = new Schedule("7:30;Office Hours-Finals Week;7:45,7:45;Eagle time;9:15,9:15;Passing Period;9:20,9:20;Period 1;10:50,10:50;Passing Period;10:55,10:55;Period 2;12:25");
 		break;
 	case 2://Tuesday
-		schedule[0] = new Schedule("7:30;Teacher Office Hours-Finals Week;7:45,7:45;Period 3;9:15,9:15;Passing Period;9:20,9:20;Period 4;10:50,10:50;Passing Period;10:55,10:55;Period 5;12:25");
+		schedule[0] = new Schedule("7:30;Office Hours-Finals Week;7:45,7:45;Period 3;9:15,9:15;Passing Period;9:20,9:20;Period 4;10:50,10:50;Passing Period;10:55,10:55;Period 5;12:25");
 		break;
 
 	case 3://Wednesday
-		schedule[0] = new Schedule("7:30;Teacher Office Hours-Finals Week;7:45,7:45;Eagle time;9:15,9:15;Passing Period;9:20,9:20;Period 6;10:50,10:50;Passing Period;10:55,10:55;Period 7;12:25");
+		schedule[0] = new Schedule("7:30;Office Hours-Finals Week;7:45,7:45;Eagle time;9:15,9:15;Passing Period;9:20,9:20;Period 6;10:50,10:50;Passing Period;10:55,10:55;Period 7;12:25");
 		break;
     }
 

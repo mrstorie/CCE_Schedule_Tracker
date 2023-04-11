@@ -219,22 +219,22 @@ function dateSchedule(){
 		break;
 	case 2://Tuesday
 		schedule[0] = new Schedule("7:35;CMAS Science 11th;11:35,11:35;Lunch Jrs;12:10,12:10;Passing Period;12:15,12:15;Period 1;13:30,13:30;Passing Period;13:35,13:35;Period 2;14:50");
-		schedule[1] = new Schedule("7:00;Good Morning;7:35");		   
+		schedule[1] = new Schedule("7:00;Good Luck CMAS testers!;7:35");		   
 	    	break;
 
 	case 3://Wednesday
 		schedule[0] = new Schedule("7:35;SAT 11th;12:40,12:40;Lunch Jrs;13:30,13:30;Passing Period;13:35,13:35;Period 3;14:50");
-		schedule[1] = new Schedule("7:00;Good Morning;7:35");		    
+		schedule[1] = new Schedule("7:00;Good Luck SAT testers!;7:35");		    
 		break;
 		
 	case 4://Thursday
 		schedule[0] = new Schedule("7:35;PSAT 10th;11:35,11:35;Lunch Sophomores;12:10,12:10;Passing Period;12:15,12:15;Period 4;13:30,13:30;Passing Period;13:35,13:35;Period 5;14:50");
-		schedule[1] = new Schedule("7:00;Good Morning;7:35");		    
+		schedule[1] = new Schedule("7:00;Good Luck PSAT 10 testers!;7:35");		    
 		break;
 		    
     	case 5://Friday
 		schedule[0] = new Schedule("7:35;PSAT 9th;11:35,11:35;Lunch Freshman;12:10,12:10;Passing Period;12:15,12:15;Period 6;13:30,13:30;Passing Period;13:35,13:35;Period 7;14:50");
-		schedule[1] = new Schedule("7:00;Good Morning;7:35");		    
+		schedule[1] = new Schedule("7:00;Good Luck PSAT 9 testers!;7:35");		    
 		break;
 		
     }

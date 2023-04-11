@@ -213,19 +213,27 @@ function dateSchedule(){
 /////final week
 		    
 	    
-	case 1://Monday
-		schedule[0] = new Schedule("7:30;Office Hours-Finals Week;7:45,7:45;Eagle time;9:15,9:15;Passing Period;9:20,9:20;Period 1;10:50,10:50;Passing Period;10:55,10:55;Period 2;12:25");
-		schedule[1] = new Schedule("12:40;End of Day;12:40");
-		    break;
+	ccase 1://Monday
+		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7;14:50");
+		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
+		break;
 	case 2://Tuesday
-		schedule[0] = new Schedule("7:30;Office Hours-Finals Week;7:45,7:45;Period 3;9:15,9:15;Passing Period;9:20,9:20;Period 4;10:50,10:50;Passing Period;10:55,10:55;Period 5;12:25");
-		schedule[1] = new Schedule("12:40;End of Day;12:40");
+		schedule[0] = new Schedule("7:35;CMAS Science 11th;11:35,11:35;Lunch Jrs;12:10,12:10;Passing Period;12:15,12:15;Period 1;13:30,13:30;Passing Period;13:35,13:35;Period 2;14:50");
 		    break;
 
 	case 3://Wednesday
-		schedule[0] = new Schedule("7:30;Office Hours-Finals Week;7:45,7:45;Eagle time;9:15,9:15;Passing Period;9:20,9:20;Period 6;10:50,10:50;Passing Period;10:55,10:55;Period 7;12:25");
-		    schedule[1] = new Schedule("12:40;End of Day;12:40");
+		schedule[0] = new Schedule("7:35;SAT 11th;12:40,12:40;Lunch Jrs;13:30,13:30;Passing Period;13:35,13:35;Period 3;14:50");
+		schedule[1] = new Schedule("12:40;Eagle Time;13:30");		    
+		break;
+		
+	case 4://Thursday
+		schedule[0] = new Schedule("7:35;PSAT 10th;11:35,11:35;Lunch Sophomores;12:10,12:10;Passing Period;12:15,12:15;Period 4;13:30,13:30;Passing Period;13:35,13:35;Period 5;14:50");
 		    break;
+		    
+    	case 4://Thursday
+		schedule[0] = new Schedule("7:35;PSAT 9th;11:35,11:35;Lunch Freshman;12:10,12:10;Passing Period;12:15,12:15;Period 6;13:30,13:30;Passing Period;13:35,13:35;Period 7;14:50");
+		    break;
+		
     }
   
 	case 1://Monday

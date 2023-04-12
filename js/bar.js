@@ -224,7 +224,7 @@ function dateSchedule(){
 
 	case 3://Wednesday
 		schedule[0] = new Schedule("7:35;SAT 11th;12:40,12:40;Lunch Jrs;13:30,13:30;Passing Period;13:35,13:35;Period 3;14:50");
-		schedule[1] = new Schedule("7:00;Good Luck SAT testers!;7:35");		    
+		schedule[1] = new Schedule("12:40;Eagle Time;13:30");		    
 		break;
 		
 	case 4://Thursday

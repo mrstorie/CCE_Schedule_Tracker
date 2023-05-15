@@ -180,8 +180,29 @@ function dateSchedule(){
     var schedule = [null, null];
 
     switch(weekDay){
+/*	**************************Finals
+	case 1://Monday
+		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54,13:54;Passing Period;13:59,13:59;Period 7;14:50");
+		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");
+		break;
+	case 2://Tuesday
+		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;EAGLE TIME;9:15,9:15;Passing Period;9:20,9:20;Period 7 Final;10:50,10:50;Period 6 Final;12:25")
+		schedule[1] = new Schedule("12:25;Good luck on Finals this week MVHS!;12:30");
+		break;
+
+	case 3://Wednesday
+		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;Period 5 Final;9:15,9:15;Passing Period;9:20,9:20;Period 4 Final;10:50,10:50;Period 3 Final;12:25")
+		schedule[1] = new Schedule("12:25;Good luck on Finals this week MVHS!;12:30");
+		break;
+
+	case 4://Thursday
+		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;EAGLE TIME;9:15,9:15;Passing Period;9:20,9:20;Period 7 Final;10:50,10:50;Period 6 Final;12:25")
+		schedule[1] = new Schedule("12:25;🌞Have a great summer break MVHS!🌞;12:30");
+		break;
+
 	
-		
+
+		}	
 //************************22 bell schedule**************
 /*		    
 
@@ -210,6 +231,8 @@ function dateSchedule(){
 		break;
 
 		}
+		
+		
 */		
 /////Graduation Week
 	    

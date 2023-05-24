@@ -196,7 +196,7 @@ function dateSchedule(){
 		break;
 
 	case 4://Thursday
-		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;EAGLE TIME;9:15,9:15;Passing Period;9:20,9:20;Period 7 Final;10:50,10:50;Period 6 Final;12:25")
+		schedule[0] = new Schedule("7:30;Teacher Office Hours;7:45,7:45;EAGLE TIME;9:15,9:15;Passing Period;9:20,9:20;Period 7 Final;10:50,10:50;Passing Period;10:55,10:55;Period 6 Final;12:25")
 		schedule[1] = new Schedule("12:25;🌞Have a great summer break MVHS!🌞;12:30");
 		break;
 

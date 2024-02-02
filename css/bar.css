@@ -35,7 +35,8 @@ body{
 
 
 .title{
-    color: #38761d;
+    /*color: #38761d;*/
+    color: #FFAB0D;
     text-align: center;
     width: 100vw;
     margin: 0;
@@ -70,14 +71,16 @@ body{
 
 
 .date{
-    color: #38761d;
+    /*color: #38761d;*/
+    color: #FFAB0D;
     background: rgba(255, 255, 255, 0.75);
     border-radius: 15px;
     text-align: center;
     padding: 10px;
 }
 .period{
-    color: #38761d;
+    /*color: #38761d;*/
+    color: #FFAB0D;
     float: right;
     margin-right: 25px;
     background: rgba(255, 255, 255, 0.75);
@@ -115,7 +118,8 @@ body{
     background-color: #38761d;
     border-radius: 10px;
     overflow: hidden;
-    background: repeating-linear-gradient(to right, green 0%, olive 50%, green 100%);
+   /* background: repeating-linear-gradient(to right, green 0%, olive 50%, green 100%);*/
+     background: repeating-linear-gradient(to right, DarkRed 0%, gold 50%, DarkRed 100%);
     width: 100%;
     background-size: 200% auto;
     background-position: 0 100%;
@@ -135,7 +139,8 @@ body{
 }
 
 #clock {
-    color: #38761d;
+   /* color: #38761d;*/
+    color: #FFAB0D;
     text-align: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;

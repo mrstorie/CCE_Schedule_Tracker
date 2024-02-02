@@ -1,5 +1,6 @@
 body{
-    background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #87B37A, #77867F);
+   /* background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #87B37A, #77867F);*/
+    background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #FFAB0D, #751807);
     height: 100vh;
     width: 100vw;
     background-size: cover;

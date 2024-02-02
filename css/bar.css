@@ -43,8 +43,10 @@ body{
 }
 
 .end{
-    color: #38761d;
-    background: rgba(255, 255, 255, 0.75);
+    /*color: #38761d;
+    background: rgba(255, 255, 255, 0.75);*/
+    background: rgba(117, 24,7,0.75);
+    color: #FFAB0D;
     border-radius: 15px;
     text-align: center;
     font-size: 5vw;
@@ -73,7 +75,8 @@ body{
 .date{
     /*color: #38761d;*/
     color: #FFAB0D;
-    background: rgba(255, 255, 255, 0.75);
+   /* background: rgba(255, 255, 255, 0.75);*/
+    background: rgba(117, 24,7,0.75);
     border-radius: 15px;
     text-align: center;
     padding: 10px;

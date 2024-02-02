@@ -11,7 +11,8 @@ body{
 
 .title_container{
     margin-bottom: 8vh;
-    background: rgba(255, 255, 255, 0.75);
+ /*   background: rgba(255, 255, 255, 0.75);*/
+    background: rgba(117, 24,7,0.75);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
    font-family: 'Harry Potter', sans-serif;
@@ -24,7 +25,8 @@ body{
     border-radius:15px;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
-    color: #38761d;
+   /* color: #38761d;*/
+    color: #FFAB0D;
     text-align: center;
     font-size: 2vw;
     

@@ -208,7 +208,7 @@ function dateSchedule(){
 
 
 case 1://Monday
-		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50");
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:10,9:10;Passing Period;9:15,9:15;Period 2;10:40,10:40;Passing Period;10:45,10:45;Kick-off Assembly;11:25,11:25;A Lunch;11:50,11:50;Passing Period;11:55,11:55;Period 3;13:20,13:20;Passing Period;13:25,13:25;Period 4;14:50");
 		schedule[1] = new Schedule("11:25;Passing Period;11:30,11:30;Period 3;12:55,12:55;B Lunch;13:20");
 		break;
 		    

@@ -82,8 +82,8 @@ body{
     padding: 10px;
 }
 .period{
-    /*color: #38761d;*/
-    color: #FFAB0D;
+    color: #38761d;
+    /*color: #FFAB0D;*/
     float: right;
     margin-right: 25px;
     background: rgba(255, 255, 255, 0.75);

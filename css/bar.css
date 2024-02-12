@@ -16,9 +16,9 @@ body{
     /*  background: rgba(117, 24,7,0.75);*/
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-   font-family: 'Harry Potter', sans-serif;
-    /*font-family: 'Lato', sans-serif;*/
-    /*font-family: 'Varela Round', sans-serif;*/
+   /* font-family: 'Harry Potter', sans-serif;*/
+   font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 3vw;
 }
 .footer_container{

@@ -1,6 +1,6 @@
 body{
-   /* background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #87B37A, #77867F);*/
-    background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #FFAB0D, #751807);
+   background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #87B37A, #77867F);
+   /*  background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #FFAB0D, #751807);*/
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -12,8 +12,8 @@ body{
 
 .title_container{
     margin-bottom: 8vh;
- /*   background: rgba(255, 255, 255, 0.75);*/
-    background: rgba(117, 24,7,0.75);
+  background: rgba(255, 255, 255, 0.75);
+    /*  background: rgba(117, 24,7,0.75);*/
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
    font-family: 'Harry Potter', sans-serif;
@@ -26,8 +26,8 @@ body{
     border-radius:15px;
     font-family: 'Lato', sans-serif;
     font-family: 'Varela Round', sans-serif;
-   /* color: #38761d;*/
-    color: #FFAB0D;
+    color: #38761d;
+   /* color: #FFAB0D;*/
     text-align: center;
     font-size: 2vw;
     
@@ -35,18 +35,18 @@ body{
 
 
 .title{
-    /*color: #38761d;*/
-    color: #FFAB0D;
+    color: #38761d;
+   /* color: #FFAB0D;*/
     text-align: center;
     width: 100vw;
     margin: 0;
 }
 
 .end{
-    /*color: #38761d;
-    background: rgba(255, 255, 255, 0.75);*/
-    background: rgba(117, 24,7,0.75);
-    color: #FFAB0D;
+   color: #38761d;
+    background: rgba(255, 255, 255, 0.75);
+     /*background: rgba(117, 24,7,0.75);
+    color: #FFAB0D;*/
     border-radius: 15px;
     text-align: center;
     font-size: 5vw;
@@ -73,10 +73,10 @@ body{
 
 
 .date{
-    /*color: #38761d;*/
-    color: #FFAB0D;
-   /* background: rgba(255, 255, 255, 0.75);*/
-    background: rgba(117, 24,7,0.75);
+    color: #38761d;
+    /*color: #FFAB0D;*/
+   background: rgba(255, 255, 255, 0.75);
+    /* background: rgba(117, 24,7,0.75);*/
     border-radius: 15px;
     text-align: center;
     padding: 10px;
@@ -86,8 +86,8 @@ body{
     color: #FFAB0D;
     float: right;
     margin-right: 25px;
-   /* background: rgba(255, 255, 255, 0.75);*/
-    background: rgba(117, 24,7,0.75);
+    background: rgba(255, 255, 255, 0.75);
+   /* background: rgba(117, 24,7,0.75);*/
     padding: 0px 20px 0px 20px;
     border-radius: 15px;
     text-align: center;
@@ -122,8 +122,8 @@ body{
     background-color: #38761d;
     border-radius: 10px;
     overflow: hidden;
-   /* background: repeating-linear-gradient(to right, green 0%, olive 50%, green 100%);*/
-     background: repeating-linear-gradient(to right, DarkRed 0%, gold 50%, DarkRed 100%);
+   background: repeating-linear-gradient(to right, green 0%, olive 50%, green 100%);
+    /*  background: repeating-linear-gradient(to right, DarkRed 0%, gold 50%, DarkRed 100%);*/
     width: 100%;
     background-size: 200% auto;
     background-position: 0 100%;
@@ -143,8 +143,8 @@ body{
 }
 
 #clock {
-   /* color: #38761d;*/
-    color: #FFAB0D;
+    color: #38761d;
+  /*  color: #FFAB0D;*/
     text-align: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;

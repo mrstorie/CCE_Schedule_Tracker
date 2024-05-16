@@ -220,7 +220,7 @@ function dateSchedule(){
 		break;
 		    
 	case 3://Wednesday
-		schedule[0] = new Schedule("7:00;🎓 Congrats Class of 2024! 🎓;14:50");
+		schedule[0] = new Schedule("7:00;🎓Congrats Class of 2024!🎓;14:50");
 		schedule[1] = new Schedule("18:00;Passing Period;,20:00");
 		break;
 		    

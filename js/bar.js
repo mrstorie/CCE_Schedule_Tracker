@@ -210,27 +210,27 @@ function dateSchedule(){
 	*/
 
 	case 1://Monday
-		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 3 Finals;9:15,9:15;Passing Period;9:20,9:20;Period 4 Finals;10:50,10:50;Passing Period;10:55,10:55;Homeroom/Eagle Time;14:50");
+		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 3 Final;9:15,9:15;Passing Period;9:20,9:20;Period 4 Final;10:50,10:50;Passing Period;10:55,10:55;Homeroom/Eagle Time;14:50");
 		schedule[1] = new Schedule("12:30;Break;13:00");  
 		break;
 		    
    	 case 2://Tuesday
-		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 5 Finals;9:15,9:15;Passing Period;9:20,9:20;Period 6 Finals;10:50,10:50;Passing Period;10:55,10:55;Homeroom/Eagle Time;14:50");
+		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 5 Final;9:15,9:15;Passing Period;9:20,9:20;Period 6 Final;10:50,10:50;Passing Period;10:55,10:55;Homeroom/Eagle Time;14:50");
 		schedule[1] = new Schedule("12:30;Break;13:00");  
 		break;
 		    
 	case 3://Wednesday
-		schedule[0] = new Schedule("7:00;Congratulations Class of 2024!;14:50");
+		schedule[0] = new Schedule("7:00;🎓 Congrats Class of 2024! 🎓;14:50");
 		schedule[1] = new Schedule("18:00;Passing Period;,20:00");
 		break;
 		    
 	case 4://Thursday
-		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Homeroom/Eagle Time;9:15,9:15;Passing Period;9:20,9:20;Period 7 Finals;11:20,11:20;Passing Period;11:25,11:25;Make-up Final;14:50");
+		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Homeroom/Eagle Time;9:15,9:15;Passing Period;9:20,9:20;Period 7 Final;11:20,11:20;Passing Period;11:25,11:25;Make-up Final;14:50");
 		schedule[1] = new Schedule("12:30;Break;13:00");  
 		break;
 		    
 	case 5://Friday
-		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1 Finals;9:15,9:15;Passing Period;9:20,9:20;Period 2 Finals;10:50,10:50;Passing Period;10:55,10:55;Homeroom/Eagle Time;14:50");
+		schedule[0] = new Schedule("7:00;Good Luck on Finals!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1 Final;9:15,9:15;Passing Period;9:20,9:20;Period 2 Final;10:50,10:50;Passing Period;10:55,10:55;Homeroom/Eagle Time;14:50");
 		schedule[1] = new Schedule("12:30;Break;13:00");   
         	break;	
     }

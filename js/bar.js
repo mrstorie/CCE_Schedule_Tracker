@@ -260,16 +260,27 @@ function getSchedules(){
     }
 }
 
-function checkTimeForRefresh() {
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
+function reloadPage(hour, minute = 0) {
+    const hours24 = 1000 * 60 * 60 * 24;
+    const now = Date.now();
+    let date = new Date(now + hours24);
+    date.setHours(hour, minute, 0, 0); // Set the hour and minute
+    const time = date.getTime() - now;
 
-    // Refresh the page at 7:00 AM and 10:15 AM
-    if ((hours === 7 && minutes === 0) || (hours === 10 && minutes === 15)) {
-        window.location.reload();
-    }
+    setTimeout(() => {
+        location.reload();
+    }, time);
 }
 
-// Check the time every minute
-setInterval(checkTimeForRefresh, 60000);
+// List of hours and minutes to reload the page
+const reloadTimes = [
+    { hour: 6, minute: 0 },
+    { hour: 7, minute: 0 },
+];
+
+// Call reloadPage for each specified time
+reloadTimes.forEach(({ hour, minute }) => reloadPage(hour, minute));
+
+// Fetch schedules when the DOM is loaded and every 24 hours
+window.addEventListener('DOMContentLoaded', getSchedules);
+setInterval(getSchedules, 1000 * 60 * 60 * 24);

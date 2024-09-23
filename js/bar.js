@@ -259,29 +259,17 @@ function getSchedules(){
         dateSchedule();
     }
 }
-function scheduleReloads() {
+
+function checkTimeForRefresh() {
     const now = new Date();
-    const reloadTimes = [
-        new Date(now.getFullYear(), now.getMonth(), now.getDate(), 6, 0), // 6:00 AM
-        new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0), // 7:00 AM
-        new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 10) // 10:10 AM
-    ];
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
 
-    // If the time for today has already passed, schedule for tomorrow
-    for (let i = 0; i < reloadTimes.length; i++) {
-        if (now > reloadTimes[i]) {
-            reloadTimes[i].setDate(reloadTimes[i].getDate() + 1);
-        }
+    // Refresh the page at 7:00 AM and 10:15 AM
+    if ((hours === 7 && minutes === 0) || (hours === 10 && minutes === 15)) {
+        window.location.reload();
     }
-
-    // Find the earliest reload time
-    const nextReload = Math.min(...reloadTimes.map(rt => rt.getTime())) - now.getTime();
-
-    // Set a timeout to reload the page at the next reload time
-    setTimeout(() => {
-        location.reload();
-    }, nextReload);
 }
 
-// Call the function to schedule reloads when the page loads
-window.addEventListener('DOMContentLoaded', scheduleReloads);
+// Check the time every minute
+setInterval(checkTimeForRefresh, 60000);

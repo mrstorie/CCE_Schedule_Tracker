@@ -284,3 +284,16 @@ reloadTimes.forEach(({ hour, minute }) => reloadPage(hour, minute));
 // Fetch schedules when the DOM is loaded and every 24 hours
 window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(getSchedules, 1000 * 60 * 60 * 24);
+
+function logFailure() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    
+    if (hours === 10 && minutes === 25) {
+        console.log("failure");
+    }
+}
+
+// Check every minute
+setInterval(logFailure, 60000);

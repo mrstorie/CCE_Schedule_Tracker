@@ -271,7 +271,7 @@ function checkTimeAndReload() {
 }
 
 // Check every minute
-setInterval(checkTimeAndReload, 60000);
+setInterval(checkTimeAndReload, 30000);
 
 
 // Fetch schedules when the DOM is loaded and every 24 hours

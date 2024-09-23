@@ -259,29 +259,29 @@ function getSchedules(){
         dateSchedule();
     }
 }
+function scheduleReloads() {
+    const now = new Date();
+    const reloadTimes = [
+        new Date(now.getFullYear(), now.getMonth(), now.getDate(), 6, 0), // 6:00 AM
+        new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0), // 7:00 AM
+        new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 10) // 10:10 AM
+    ];
 
-function reloadPage(hour, minute = 0) {
-    const hours24 = 1000 * 60 * 60 * 24;
-    const now = Date.now();
-    let date = new Date(now + hours24);
-    date.setHours(hour, minute, 0, 0); // Set the hour and minute
-    const time = date.getTime() - now;
+    // If the time for today has already passed, schedule for tomorrow
+    for (let i = 0; i < reloadTimes.length; i++) {
+        if (now > reloadTimes[i]) {
+            reloadTimes[i].setDate(reloadTimes[i].getDate() + 1);
+        }
+    }
 
+    // Find the earliest reload time
+    const nextReload = Math.min(...reloadTimes.map(rt => rt.getTime())) - now.getTime();
+
+    // Set a timeout to reload the page at the next reload time
     setTimeout(() => {
         location.reload();
-    }, time);
+    }, nextReload);
 }
 
-// List of hours and minutes to reload the page
-const reloadTimes = [
-    { hour: 6, minute: 0 },
-    { hour: 7, minute: 0 },
-    { hour: 10, minute: 2 },
-];
-
-// Call reloadPage for each specified time
-reloadTimes.forEach(({ hour, minute }) => reloadPage(hour, minute));
-
-// Fetch schedules when the DOM is loaded and every 24 hours
-window.addEventListener('DOMContentLoaded', getSchedules);
-setInterval(getSchedules, 1000 * 60 * 60 * 24);
+// Call the function to schedule reloads when the page loads
+window.addEventListener('DOMContentLoaded', scheduleReloads);

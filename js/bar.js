@@ -282,7 +282,7 @@ function scheduleReload(hour, minute = 0) {
 const reloadTimes = [
     { hour: 6, minute: 0 },
     { hour: 7, minute: 0 },
-    { hour: 9, minute: 54 }
+    { hour: 9, minute: 56 }
 ];
 
 // Schedule reloads for each specified time

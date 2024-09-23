@@ -9,26 +9,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Varela+Round&display=swap" rel="stylesheet">
-		<!--Wish Week Font 2024-->
-		<style>
-		@import url('https://fonts.cdnfonts.com/css/harry-potter');
-		</style>
 </head>
 
 <body>
 <div class="background_container">
 	<div class="title_container">
-    		<h1 class="title">Mountain Vista High School </h1>
-			<h3 id ="clock">
-				<script>
-					var clockElement = document.getElementById("clock");
-						setInterval(function () {
-						clock.innerHTML = new Date().toLocaleTimeString();
-						}, 1000);
-				</script>
-
-			</h3>
+		<div class="logo_container">
+			<img src="images/MVHS.png" id="mvhs-logo" alt="MVHS Logo">
+		</div>
+		<div class="img_container">
+			<!-- TUES --> <!-- <img src="images/heart2.png" alt="Heart" id="img"> -->
+		</div>
+		<h3 id="clock">
+			<script>
+				var clockElement = document.getElementById("clock");
+				setInterval(function () {
+					var now = new Date();
+					var hours = now.getHours();
+					var minutes = now.getMinutes();
+					var seconds = now.getSeconds();
+			
+					// Convert to 12-hour format
+					hours = hours % 12 || 12;
+			
+					// Add leading zeros to minutes and seconds if needed
+					minutes = minutes < 10 ? '0' + minutes : minutes;
+					seconds = seconds < 10 ? '0' + seconds : seconds;
+			
+					var timeString = hours + ':' + minutes + ':' + seconds;
+					clockElement.innerHTML = timeString;
+				}, 1000);
+			</script>
+			
+			
+		</h3>
 	</div>
+	
+	
+	
 
 	<div class="text_container">
     		<span class="date" id="date"></span>
@@ -57,14 +75,13 @@
     		<span class="progress_time">No timer running.</span>
 	</div>
 
-<!--Store announcement--><br>
+<!-- Announcement --><br>
 	<div class="footer_container">
-		<h4 style="margin-bottom: 0px; padding-bottom:0;">Cliff's School Store News:</h4>
-		<p style="margin: 0px; padding:0;">Cliff's Store Open During School Hours - Come Visit! </p>
-	</div>	
-<!--signature-->	
+		<!-- <h4 style="margin-bottom: 0px; padding-bottom:0;">Homecoming!</h4>
+		<p style="margin: 0px; padding:0;">Tomorrow: Battle of the Ancient Gods</p> -->
+	</div>
 	<div>
-		<span class="names">Made by William Hooper and Aleksis Vilums Class of 2022</span>
+		<span class="names">Made by William Hooper & Aleksis Vilums (2022)  -  Edited & Optimized by Austin Strong (2028)</span>
 	</div>
 
 </div>

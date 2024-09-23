@@ -274,7 +274,8 @@ function reloadPage(hour, minute = 0) {
 
 setInterval(() => {
     location.reload();
-}, 60000);
+    console.log("test")
+}, 3000);
 
 // Fetch schedules when the DOM is loaded and every 24 hours
 window.addEventListener('DOMContentLoaded', getSchedules);

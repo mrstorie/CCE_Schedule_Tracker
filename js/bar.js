@@ -275,7 +275,7 @@ function reloadPage(hour, minute = 0) {
 // List of hours and minutes to reload the page
 const reloadTimes = [
     { hour: 6, minute: 0 },
-    { hour: 7, minute: 0 },
+    { hour: 10, minute: 19 },
 ];
 
 // Call reloadPage for each specified time

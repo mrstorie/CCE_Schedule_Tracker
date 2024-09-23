@@ -260,22 +260,19 @@ function getSchedules(){
     }
 }
 
-function reloadPage(hour, minute = 0) {
-    const hours24 = 1000 * 60 * 60 * 24;
-    const now = Date.now();
-    let date = new Date(now + hours24);
-    date.setHours(hour, minute, 0, 0); // Set the hour and minute
-    const time = date.getTime() - now;
+function checkTimeAndReload() {
+    const now = new Date();
+    const targetHour = 10; // 10 AM
+    const targetMinute = 43; // 43 minutes
 
-    setTimeout(() => {
+    if (now.getHours() === targetHour && now.getMinutes() === targetMinute) {
         location.reload();
-    }, time);
+    }
 }
 
-setInterval(() => {
-    location.reload();
-    console.log("test")
-}, 10000);
+// Check every minute
+setInterval(checkTimeAndReload, 60000);
+
 
 // Fetch schedules when the DOM is loaded and every 24 hours
 window.addEventListener('DOMContentLoaded', getSchedules);

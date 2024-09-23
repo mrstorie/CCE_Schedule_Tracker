@@ -1,6 +1,43 @@
-body{
-   background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #87B37A, #77867F);
-   /*  background-image: url(../images/MVHS-Logo.png), linear-gradient(45deg, #000000, #FFAB0D, #751807);*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */
+ 
+:root {
+    --text-color: #ffffff;
+
+    --font-family: 'DM Sans', sans-serif;
+
+    --clock-font-family: 'DM Mono', sans-serif;
+    /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
+
+    --background: linear-gradient(70deg, #01401E, #B19539);
+
+    --text-background: rgba(0, 0, 0, 0.5);
+
+    --progress-bar-animation-length: 4.5s;
+
+    --progress-bar-angle: to right;
+
+    --progress-bar-color-1: #007d3b;
+
+    --progress-bar-color-2: #d2b246;
+
+    --progress-bar-background: rgba(0, 0, 0, 0.5);
+
+    --progress-bar-border: #FFFFFF;
+
+    --names-color: rgb(255, 255, 255);
+}
+
+/* DO NOT EDIT BELOW THIS TEXT (UNLESS YOU KNOW WHAT YOU'RE DOING) */
+
+body {
+   background-image: var(--background);
+   font-family: var(--font-family);
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -10,24 +47,21 @@ body{
     margin: 0;
 }
 
-.title_container{
+.title_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the clock horizontally */
     margin-bottom: 8vh;
-  background: rgba(255, 255, 255, 0.75);
-    /*  background: rgba(117, 24,7,0.75);*/
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-   /* font-family: 'Harry Potter', sans-serif;*/
-   font-family: 'Lato', sans-serif;
-    font-family: 'Varela Round', sans-serif;
+    background: var(--text-background);
+    font-family: var(--font-family);
     font-size: 3vw;
 }
-.footer_container{
-    background: rgba(255, 255, 255, 0.75);
-    border-radius:15px;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Varela Round', sans-serif;
-    color: #38761d;
-   /* color: #FFAB0D;*/
+
+.footer_container {
+    background: var(--text-background);
+    color: var(--text-color);
+    font-family: var(--font-family);
     text-align: center;
     font-size: 2vw;
     
@@ -35,7 +69,7 @@ body{
 
 
 .title{
-    color: #38761d;
+    color: var(--text-color);
    /* color: #FFAB0D;*/
     text-align: center;
     width: 100vw;
@@ -43,15 +77,14 @@ body{
 }
 
 .end{
-   color: #38761d;
-    background: rgba(255, 255, 255, 0.75);
+   color: var(--text-color);
+   background: var(--text-background);
+   font-family: var(--font-family);
      /*background: rgba(117, 24,7,0.75);
     color: #FFAB0D;*/
-    border-radius: 15px;
+    border-radius: 18px;
     text-align: center;
     font-size: 5vw;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Varela Round', sans-serif;
     font-weight: bold;
     display: table;
     margin: 0 auto;
@@ -66,30 +99,27 @@ body{
 .text_container{
     font-weight: bold;
     font-size: 3vw;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Varela Round', sans-serif;
     padding-bottom: 3vw;
 }
 
 
 .date{
-    color: #38761d;
-    /*color: #FFAB0D;*/
-   background: rgba(255, 255, 255, 0.75);
-    /* background: rgba(117, 24,7,0.75);*/
-    border-radius: 15px;
+    color: var(--text-color);
+    background: var(--text-background);
+    font-family: var(--font-family);
+    border-radius: 18px;
     text-align: center;
     padding: 10px;
+    margin-left: 40px;
 }
 .period{
-    color: #38761d;
-    /*color: #FFAB0D;*/
+    color: var(--text-color);
+    font-family: var(--font-family);
     float: right;
-    margin-right: 25px;
-    background: rgba(255, 255, 255, 0.75);
-   /* background: rgba(117, 24,7,0.75);*/
+    margin-right: 40px;
+    background: var(--text-background);
     padding: 0px 20px 0px 20px;
-    border-radius: 15px;
+    border-radius: 18px;
     text-align: center;
     padding: 10px;
 }
@@ -99,35 +129,37 @@ body{
 }
 
 .names{
-	color: ;
+	color: var(--names-color);
 	position: absolute;
 	bottom: 0;
+    font-family: var(--font-family);
 	right: 0;
+    margin: 3px;
+    font-size: 16px;
 }
-
-
 
 .progress_container {
     width: 75%;
     margin: auto;
-    height: 4vw;
-    background-color: #bdaa70ff;
-    border-radius: 10px;
+    height: 5.5vw;
+    background-color: var(--progress-bar-background);
+    font-family: var(--font-family);
+    border-radius: 14px;
     position: relative;
+    border: 2px solid var(--progress-bar-border);
 }
 
 .progress_bar {
     width: 10%;
     height: 100%;
-    background-color: #38761d;
-    border-radius: 10px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    border-radius: 14px;
     overflow: hidden;
-   background: repeating-linear-gradient(to right, green 0%, olive 50%, green 100%);
-    /*  background: repeating-linear-gradient(to right, DarkRed 0%, gold 50%, DarkRed 100%);*/
-    width: 100%;
+    background: repeating-linear-gradient(var(--progress-bar-angle), var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-1));
     background-size: 200% auto;
     background-position: 0 100%;
-    animation: gradient 5s infinite;
+    animation: gradient var(--progress-bar-animation-length) infinite;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
@@ -137,22 +169,17 @@ body{
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    color: white;
+    color: var(--text-color);
+    font-family: var(--font-family);
     font-weight: bold;
     font-size: 4vw;
 }
 
 #clock {
-    color: #38761d;
-  /*  color: #FFAB0D;*/
-    text-align: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Varela Round', sans-serif;
-    font-size: 2.5vw;
+    color: var(--text-color);
+    font-family: var(--clock-font-family);
+    font-size: 5vw;
     margin: 0;
-
 }
 
 @keyframes gradient { 
@@ -164,4 +191,29 @@ body{
 	0% { background-position: 0% 50%}
 	50% { background-position: 100% 50%}
 	100% { background-position: 0% 50%}
+}
+
+
+#mvhs-logo {
+    height: 5vw; /* Adjust this value to match the size of the clock */
+}
+
+#img {
+    height: 5vw;
+}
+
+.logo_container {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.img_container {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }

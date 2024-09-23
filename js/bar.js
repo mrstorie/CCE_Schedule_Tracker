@@ -260,29 +260,34 @@ function getSchedules(){
     }
 }
 
-function reloadPage(hour, minute = 0) {
-    const hours24 = 1000 * 60 * 60 * 24;
-    const now = Date.now();
-    let date = new Date(now + hours24);
-    date.setHours(hour, minute, 0, 0); // Set the hour and minute
-    const time = date.getTime() - now;
+function scheduleReload(hour, minute = 0) {
+    const now = new Date();
+    const nextReload = new Date();
+
+    nextReload.setHours(hour, minute, 0, 0); // Set the target time
+
+    // If the target time has already passed today, schedule for tomorrow
+    if (nextReload <= now) {
+        nextReload.setDate(now.getDate() + 1);
+    }
+
+    const timeUntilReload = nextReload.getTime() - now.getTime();
 
     setTimeout(() => {
         location.reload();
-    }, time);
+    }, timeUntilReload);
 }
 
 // List of hours and minutes to reload the page
 const reloadTimes = [
     { hour: 6, minute: 0 },
     { hour: 7, minute: 0 },
-    { hour: 9, minute: 48}
+    { hour: 9, minute: 54 }
 ];
 
-// Call reloadPage for each specified time
-reloadTimes.forEach(({ hour, minute }) => reloadPage(hour, minute));
+// Schedule reloads for each specified time
+reloadTimes.forEach(({ hour, minute }) => scheduleReload(hour, minute));
 
 // Fetch schedules when the DOM is loaded and every 24 hours
 window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(getSchedules, 1000 * 60 * 60 * 24);
-

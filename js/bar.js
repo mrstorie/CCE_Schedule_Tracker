@@ -260,18 +260,42 @@ function getSchedules(){
     }
 }
 
-function reloadPage(hour){
+function reloadPage(hour) {
     const hours24 = 1000 * 60 * 60 * 24;
     var date = new Date(Date.now() + hours24); 
     date.setHours(hour);
     time = date.getTime() - Date.now();
 
     setTimeout(function() {
-        location.reload();
+        location.href = location.href.split('?')[0] + '?reload=' + new Date().getTime(); 
     }, time);
 }
 
+function reloadPageAt(hour) {
+    var now = new Date();
+    var reloadTime = new Date();
+
+    // Set the reload time to today at the specified hour (7 AM in this case)
+    reloadTime.setHours(hour, 0, 0, 0);
+
+    // If the reload time is in the past, set it for the next day
+    if (reloadTime <= now) {
+        reloadTime.setDate(now.getDate() + 1);
+    }
+
+    var timeUntilReload = reloadTime - now; // Time difference in milliseconds
+
+    setTimeout(function() {
+        location.href = location.href.split('?')[0] + '?reload=' + new Date().getTime(); // Hard refresh
+    }, timeUntilReload);
+}
+
+// Example usage: set the page to reload every day at 7 AM
+
 window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(getSchedules, 1000*60*60*24);
+
 reloadPage(6);
 reloadPage(7);
+reloadPageAt(6);
+reloadPageAt(7);

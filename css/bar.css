@@ -146,7 +146,7 @@ body {
 
 .progress_container {
     width: 75%;
-    margin: 0px;
+    margin: auto;
     height: 5.5vw;
     background-color: var(--progress-bar-background);
     font-family: var(--font-family);

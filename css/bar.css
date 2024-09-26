@@ -52,7 +52,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; /* Centers the clock horizontally */
-    margin-bottom: 8vh;
+    margin-bottom: 6vh;
     background: var(--text-background);
     font-family: var(--font-family);
     font-size: 3vw;

@@ -225,9 +225,11 @@ body {
 }
 
 .qrcode {
-    height: 160px;
-    width: 160px;
+    height: 158px;
+    width: 158px;
     position: absolute;
     left: 0px;
     bottom: 0px;
+    background-color: white;
+    padding: 1px;
 }

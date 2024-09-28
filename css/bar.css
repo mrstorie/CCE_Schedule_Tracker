@@ -225,13 +225,13 @@ body {
 }
 
 .qrcode {
-    height: 145px;
-    width: 145px;
+    height: 149px;
+    width: 149px;
     position: absolute;
     left: 0px;
     bottom: 0px;
     background-color: white;
-    padding: 5px;
+    padding: 3px;
     margin: 5px;
     z-index: 10;
 }

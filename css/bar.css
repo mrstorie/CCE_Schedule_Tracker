@@ -232,4 +232,5 @@ body {
     bottom: 0px;
     background-color: white;
     padding: 1px;
+    z-index: 10;
 }

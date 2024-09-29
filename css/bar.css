@@ -228,8 +228,8 @@ body {
     height: 150px;
     width: 150px;
     position: absolute;
-    left: 0px;
-    bottom: 0px;
+    left: 50px;
+    bottom: 50px;
     background-color: white;
     margin: 5px;
     z-index: 10;

@@ -224,14 +224,18 @@ body {
     height: 100%;
 }
 
-.qrcode {
-    height: 149px;
-    width: 149px;
+.qrcode-container {
+    height: 150px;
+    width: 150px;
     position: absolute;
     left: 0px;
     bottom: 0px;
     background-color: white;
-    padding: 3px;
     margin: 5px;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 3px;
 }

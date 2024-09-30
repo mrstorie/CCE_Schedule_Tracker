@@ -9,12 +9,12 @@
 :root {
     --text-color: #ffffff;
 
-    --font-family: 'Patrick Hand', 'DM Sans', sans-serif;
+    --font-family: 'DM Sans', sans-serif;
 
     --clock-font-family: 'DM Mono', sans-serif;
-    /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
+    /* This font should always remain DM Mono, another Monospace font, or another font that is very easy to read numbers in. */
 
-    --background: linear-gradient(70deg, #da294f, #ff70db);
+    --background: linear-gradient(70deg, #d42a2a, #ff70db);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
@@ -22,9 +22,9 @@
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: #ff78dd;
+    --progress-bar-color-1: #b01919;
 
-    --progress-bar-color-2: #ff5b68;
+    --progress-bar-color-2: #e432b8;
 
     --progress-bar-background: rgba(0, 0, 0, 0.5);
 

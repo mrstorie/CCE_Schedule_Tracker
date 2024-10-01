@@ -12,19 +12,19 @@
     --font-family: 'DM Sans', sans-serif;
 
     --clock-font-family: 'DM Mono', sans-serif;
-    /* This font should always remain DM Mono, another Monospace font, or another font that is very easy to read numbers in. */
+    /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
 
-    --background: linear-gradient(70deg, #d42a2a, #ff7070);
+    --background: linear-gradient(70deg, #01401E, #B19539);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
-    --progress-bar-animation-length: 6s;
+    --progress-bar-animation-length: 4.5s;
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: #b01919;
+    --progress-bar-color-1: #007d3b;
 
-    --progress-bar-color-2: #e43261;
+    --progress-bar-color-2: #d2b246;
 
     --progress-bar-background: rgba(0, 0, 0, 0.5);
 

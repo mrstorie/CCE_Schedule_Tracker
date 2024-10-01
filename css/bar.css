@@ -1,7 +1,13 @@
+/* FONTS */
+/* Default font */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* Slab font (good for ancient things) */
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Default number font */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Playful font */
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+/* Old font (serif as can be) */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */

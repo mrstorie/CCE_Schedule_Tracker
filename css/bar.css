@@ -183,7 +183,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    color: var(--text-color);
+    color: var(--progress-bar-text-color);
     font-family: var(--font-family);
     font-weight: bold;
     font-size: 4vw;

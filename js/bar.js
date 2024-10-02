@@ -203,8 +203,8 @@ function dateSchedule(){
 		schedule[1] = new Schedule("10:56;Passing Period;11:01,11:01;Period 6;12:35,12:35;Taste of Vista-B;13:11");
 		break;
 	case 5://Homecoming
-		schedule[0] = new Schedule("7:00;Good Morning!;7:45,7:45;Period 1;8:25,8:25;Passing Period;8:30,8:30;Period 2;9:10,9:10;Passing Period;9:15,9:15;Period 3;9:55,9:55;Passing Period;10:00,10:00;ASSEMBLY;11:10,11:0;Period 4;11:55,11:55;A Lunch;12:35,12:35;Passing Period;12:40,12:40;Period 5;13:20,13:20;Passing Period;13:25, 13:25;Period 6;14:05,14:05;Passing Period;14:10,14:10;Period 7;14:50");
-		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");   
+		schedule[0] = new Schedule("7:00;Good Morning!;7:45,7:45;Period 1;8:25,8:25;Passing Period;8:30,8:30;Period 2;9:10,9:10;Passing Period;9:15,9:15;Period 3;9:55,9:55;Passing Period;10:00,10:00;📣ASSEMBLY📣;11:10,11:10;Passing Period;11:55,11:55;A Lunch;12:35,12:35;Passing Period;12:40,12:40;Period 5;13:20,13:20;Passing Period;13:25, 13:25;Period 6;14:05,14:05;Passing Period;14:10,14:10;Period 7;14:50");
+		schedule[1] = new Schedule("11:55;Passing Period;12:00,12:00;Period 5;12:40,12:40;B Lunch;13:20");   
         	break;		    
 		    
 	/*case 5://Friday

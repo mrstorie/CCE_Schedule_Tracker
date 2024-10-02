@@ -13,33 +13,34 @@
 /* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */
  
 :root {
-    --text-color: #ffffff;
+    --text-color: #797979;
 
-    --progress-bar-text-color: #000000;
+    --progress-bar-text-color: #797979;
 
-    --font-family: 'DM Sans', sans-serif;
+    --font-family: 'Lora', 'DM Sans', sans-serif;
 
     --clock-font-family: 'DM Mono', sans-serif;
-    /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
+    /* This font should always remain DM Mono, another Monospace font, or another font that is very easy to read numbers in. */
 
-    --background: linear-gradient(70deg, #38bdff, #6bff72);
+    --background: linear-gradient(70deg, #ffffff, #c6c6c6);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
-    --progress-bar-animation-length: 4.5s;
+    --progress-bar-animation-length: 8s;
+    /* Pre-hoco: 6s */
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: #ffee39;
+    --progress-bar-color-1: #727272;
 
-    --progress-bar-color-2: #ff8e16;
+    --progress-bar-color-2: #c6c6c6;
 
-    --progress-bar-background: rgba(255, 255, 255, 0.5);
+    --progress-bar-background: rgba(255, 255, 255, 0.3);
 
     --progress-bar-border: #000000;
 
     --names-color: rgb(0, 0, 0);
-}
+} 
 
 /* DO NOT EDIT BELOW THIS TEXT (UNLESS YOU KNOW WHAT YOU'RE DOING) */
 

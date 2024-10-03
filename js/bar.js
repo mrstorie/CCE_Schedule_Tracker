@@ -184,35 +184,39 @@ function dateSchedule(){
 
 
 	case 1://Monday
-		schedule[0] = new Schedule("7:00;Good Morning!;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50");
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50");
 		schedule[1] = new Schedule("10:58;Passing Period;11:03,11:03;Period 3;12:37,12:37;B Lunch;13:11");
 		break;
 		    
    	 case 2://Tuesday
-		schedule[0] = new Schedule("7:00;Good Morning!;8:05,8:05;Period 5;9:39,9:39;Homeroom;9:49,9:49;S.A.S;10:56,10:56;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 6;13:11,13:11;Passing Period;13:16,13:16;Period 7;14:50");
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher PLC;8:05,8:05;Period 5;9:39,9:39;Homeroom;9:49,9:49;S.A.S;10:56,10:56;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 6;13:11,13:11;Passing Period;13:16,13:16;Period 7;14:50");
 		schedule[1] = new Schedule("10:56;Passing Period;11:01,11:01;Period 6;12:35,12:35;B Lunch;13:11");
 		break;
 		    
 	case 3://Wednesday
-		schedule[0] = new Schedule("7:00;Good Morning!;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50");
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50");
 		schedule[1] = new Schedule("10:58;Passing Period;11:03,11:03;Period 3;12:37,12:37;B Lunch;13:11");
 		break;
 		    
 	case 4://Thursday
-		schedule[0] = new Schedule("7:00;Good Morning!;8:05,8:05;Period 5;9:39,9:39;Homeroom;9:49,9:49;Eagle Time;10:56,10:56;Taste of Vista-A;11:32,11:32;Passing Period;11:37,11:37;Period 6;13:11,13:11;Passing Period;13:16,13:16;Period 7;14:50");
-		schedule[1] = new Schedule("10:56;Passing Period;11:01,11:01;Period 6;12:35,12:35;Taste of Vista-B;13:11");
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher PLC;8:05,8:05;Period 5;9:39,9:39;Homeroom;9:49,9:49;Eagle Time;10:56,10:56;TASTE OF VISTA!;11:32,11:32;Passing Period;11:37,11:37;Period 6;13:11,13:11;Passing Period;13:16,13:16;Period 7;14:50");
+		schedule[1] = new Schedule("10:56;Passing Period;11:01,11:01;Period 6;12:35,12:35;TASTE OF VISTA;13:11");
 		break;
-	case 5://Homecoming
-		schedule[0] = new Schedule("7:00;Good Morning!;7:45,7:45;Period 1;8:25,8:25;Passing Period;8:30,8:30;Period 2;9:10,9:10;Passing Period;9:15,9:15;Period 3;9:55,9:55;Passing Period;10:00,10:00;ASSEMBLY;11:10,11:10;Passing Period;11:55,11:55;A Lunch;12:35,12:35;Passing Period;12:40,12:40;Period 5;13:20,13:20;Passing Period;13:25, 13:25;Period 6;14:05,14:05;Passing Period;14:10,14:10;Period 7;14:50");
-		schedule[1] = new Schedule("11:55;Passing Period;12:00,12:00;Period 5;12:40,12:40;B Lunch;13:20");   
-        	break;		    
 		    
-	/*case 5://Friday
-		schedule[0] = new Schedule("7:00;Good Morning!;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54, 13:54;Passing Period;13:59,13:59;Period 7;14:50");
+	case 5://Friday
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;8:25,8:25;Passing Period;8:30,8:30;Period 2;9:10,9:10;Passing Period;9:15,9:15;Period 3;9:55,9:55;Passing Period;10:00,10:00;HOMECOMING ASSEMBLY;11:15,11:15;Period 4;11:55,11:55;A LUNCH;12:35,12:35;Passing Period;12:40,12:40;Period 5;13:20,13:20;Passing Period;13:25,13:25;Period 6;14:05,14:05;Passing Period;14:10,14:10;Period 7;14:50");
+		schedule[1] = new Schedule("11:55;Passing Period;12:00,12:00;Period 5;12:40,12:40;B Lunch;13:20");   
+        	break;	
+		    
+		    /*
+  		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54, 13:54;Passing Period;13:59,13:59;Period 7;14:50");
 		schedule[1] = new Schedule("11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58");   
         	break;	
-	 */
-	
+		 short week - Friday = Monday
+		schedule[0] = new Schedule("7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50");
+		schedule[1] = new Schedule("10:58;Passing Period;11:03,11:03;Period 3;12:37,12:37;B Lunch;13:11");
+		break;
+		*/    
 
 	
     }
@@ -265,44 +269,18 @@ function getSchedules(){
     }
 }
 
-function reloadPage(hour) {
+function reloadPage(hour){
     const hours24 = 1000 * 60 * 60 * 24;
     var date = new Date(Date.now() + hours24); 
     date.setHours(hour);
     time = date.getTime() - Date.now();
 
     setTimeout(function() {
-        location.href = location.href.split('?')[0] + '?reload=' + new Date().getTime(); 
+        location.reload();
     }, time);
 }
 
-function reloadPageAt(hour) {
-    var now = new Date();
-    var reloadTime = new Date();
-
-    // Set the reload time to today at the specified hour (7 AM in this case)
-    reloadTime.setHours(hour, 0, 0, 0);
-
-    // If the reload time is in the past, set it for the next day
-    if (reloadTime <= now) {
-        reloadTime.setDate(now.getDate() + 1);
-    }
-
-    var timeUntilReload = reloadTime - now; // Time difference in milliseconds
-
-    setTimeout(function() {
-        location.href = location.href.split('?')[0] + '?reload=' + new Date().getTime(); // Hard refresh
-    }, timeUntilReload);
-}
-
-// Example usage: set the page to reload every day at 7 AM
-
 window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(getSchedules, 1000*60*60*24);
-
-reloadPage(6);
+reloadPage(6)
 reloadPage(7);
-reloadPageAt(6);
-reloadPageAt(7);
-reloadPage(8);
-reloadPage at(8);

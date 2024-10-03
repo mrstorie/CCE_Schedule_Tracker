@@ -13,9 +13,9 @@
 /* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */
  
 :root {
-    --text-color: #797979;
+    --text-color: #ffffff;
 
-    --progress-bar-text-color: #797979;
+    --progress-bar-text-color: #000000;
 
     --font-family: 'Lora', 'DM Sans', sans-serif;
 

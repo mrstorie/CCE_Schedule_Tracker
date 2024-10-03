@@ -26,7 +26,7 @@
 
     --text-background: rgba(0, 0, 0, 0.5);
 
-    --progress-bar-animation-length: 4s;
+    --progress-bar-animation-length: 3s;
     /* Pre-hoco: 6s */
 
     --progress-bar-angle: to right;
@@ -43,6 +43,12 @@
 }
 
 /* DO NOT EDIT BELOW THIS TEXT (UNLESS YOU KNOW WHAT YOU'RE DOING) */
+
+
+/**/
+/**/
+/**/
+
 
 body {
    background-image: var(--background);

@@ -72,6 +72,7 @@ body {
     color: var(--text-color);
     font-family: var(--font-family);
     text-align: center;
+    padding: 2px 0px 2px 0px;
 }
 
 .footer_container p {
@@ -79,7 +80,7 @@ body {
 }
 
 .footer_container h4 {
-    font-size: 3vw;
+    font-size: 2.8vw;
 }
 
 

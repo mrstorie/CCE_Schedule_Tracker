@@ -304,3 +304,5 @@ reloadPage(6);
 reloadPage(7);
 reloadPageAt(6);
 reloadPageAt(7);
+reloadPage(8);
+reloadPage at(8);

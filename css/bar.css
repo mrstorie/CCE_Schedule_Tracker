@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 /* Old font (serif as can be) */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* Halloween font */
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
 
 /* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */
  
@@ -17,12 +19,12 @@
 
     --progress-bar-text-color: #ffffff;
 
-    --font-family: 'DM Sans', sans-serif;
+    --font-family: 'Jolly Lodger', sans-serif;
 
     --clock-font-family: 'DM Mono', sans-serif;
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
 
-    --background: linear-gradient(70deg, #01401E, #B19539);
+    --background: linear-gradient(70deg, #000000, #642309);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
@@ -30,9 +32,9 @@
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: #007d3b;
+    --progress-bar-color-1: #f2691f;
 
-    --progress-bar-color-2: #d2b246;
+    --progress-bar-color-2: #ed784a;
 
     --progress-bar-background: rgba(0, 0, 0, 0.5);
 

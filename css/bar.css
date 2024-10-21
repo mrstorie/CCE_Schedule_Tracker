@@ -54,7 +54,6 @@
 body {
 /* 	background-image: var(--background); */
    background-image: url(../images/halloweenimage.png), linear-gradient(65deg, black, #FFA500);
-	filter: opacity(50%);
    font-family: var(--font-family);
     height: 100vh;
     width: 100vw;

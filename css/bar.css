@@ -176,7 +176,7 @@ body {
     height: 100%;
     color: var(--progress-bar-text-color);
     font-family: var(--font-family);
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
     background: repeating-linear-gradient(90deg, var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-1));
     background-size: 200% auto;

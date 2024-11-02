@@ -23,19 +23,17 @@
 
     --clock-font-family: 'DM Mono', sans-serif;
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
-    /* Side Note: If I ever find out that a serif font is used for any reason other than special themes I will be very upset. */
+    /* Side Note: If I ever find out that a serif font is used for any reason other than special themes I will be very upset. (joke) */
 
-    --background: linear-gradient(70deg, #000000, #642309);
+    --background: linear-gradient(70deg, #dd77ed, #bc31eb);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
     --progress-bar-animation-length: 4.5s;
 
-    --progress-bar-angle: to right;
+    --progress-bar-color-1: #f155ff;
 
-    --progress-bar-color-1: #d9530a;
-
-    --progress-bar-color-2: #ec9978;
+    --progress-bar-color-2: #b218d1;
 
     --progress-bar-background: rgba(0, 0, 0, 0.5);
 
@@ -54,7 +52,7 @@
 
 body {
 /* 	background-image: var(--background); */
-   background-image: url(../images/halloweenimage.png), linear-gradient(65deg, black, #FFA500, black);
+   background-image: linear-gradient(65deg, var(--progress-bar-color-1), var(--progress-bar-color-2));
    font-family: var(--font-family);
     height: 100vh;
     width: 100vw;
@@ -180,7 +178,7 @@ body {
     font-family: var(--font-family);
     border-radius: 14px;
     overflow: hidden;
-    background: repeating-linear-gradient(var(--progress-bar-angle), var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-1));
+    background: repeating-linear-gradient(90deg, var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-1));
     background-size: 200% auto;
     background-position: 0 100%;
     animation: gradient var(--progress-bar-animation-length) infinite;

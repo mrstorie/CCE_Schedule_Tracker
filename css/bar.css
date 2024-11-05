@@ -51,11 +51,11 @@
 
 
 body {
-    background-image: var(--background);
-   font-family: var(--font-family);
+    background-image: url('/images/duovote.png'), var(--background);
+    font-family: var(--font-family);
     height: 100vh;
     width: 100vw;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     overflow: hidden;

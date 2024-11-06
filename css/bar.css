@@ -25,21 +25,21 @@
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
     /* Side Note: If I ever find out that a serif font is used for any reason other than special themes I will be very upset. (joke) */
 
-    --background: linear-gradient(70deg, #0f15b7, #a41818);
+    --background: linear-gradient(70deg, #ffffff, #ffffff);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
-    --progress-bar-animation-length: 2.5s;
+    --progress-bar-animation-length: 6s;
 
     --progress-bar-color-1: #e66a6a;
 
-    --progress-bar-color-2: #6a94e6;
+    --progress-bar-color-2: #e01f1f;
 
     --progress-bar-background: rgba(0, 0, 0, 0.5);
 
-    --progress-bar-border: #FFFFFF;
+    --progress-bar-border: #000000;
 
-    --names-color: rgb(255, 255, 255);
+    --names-color: rgb(0, 0, 0);
 }
 
 /* DO NOT EDIT BELOW THIS TEXT (UNLESS YOU KNOW WHAT YOU'RE DOING) */

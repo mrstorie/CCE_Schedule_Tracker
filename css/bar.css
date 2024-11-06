@@ -25,7 +25,7 @@
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
     /* Side Note: If I ever find out that a serif font is used for any reason other than special themes I will be very upset. (joke) */
 
-    --background: linear-gradient(70deg, #cecece, #cecece);
+    /* --background: url(images/giphy.gif), linear-gradient(70deg, #cecece, #cecece); */
 
     --text-background: rgba(0, 0, 0, 0.5);
 
@@ -51,7 +51,7 @@
 
 
 body {
-    background-image: var(--background);
+    background-image: linear-gradient(65deg, #cecece, #a3a3a3), url(images/giphy.gif);
     font-family: var(--font-family);
     height: 100vh;
     width: 100vw;

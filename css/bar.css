@@ -105,7 +105,7 @@ body {
    font-family: var(--font-family);
      /*background: rgba(117, 24,7,0.75);
     color: #FFAB0D;*/
-    border-radius: 18px;
+    border-radius: 1000px;
     text-align: center;
     font-size: 5vw;
     font-weight: bold;
@@ -130,7 +130,7 @@ body {
     color: var(--text-color);
     background: var(--text-background);
     font-family: var(--font-family);
-    border-radius: 18px;
+    border-radius: 20px;
     text-align: center;
     padding: 10px;
     margin-left: 40px;
@@ -142,7 +142,7 @@ body {
     margin-right: 40px;
     background: var(--text-background);
     padding: 0px 20px 0px 20px;
-    border-radius: 18px;
+    border-radius: 20px;
     text-align: center;
     padding: 10px;
 }
@@ -168,7 +168,7 @@ body {
     overflow: hidden;
     background-color: var(--progress-bar-background);
     font-family: var(--font-family);
-    border-radius: 14px;
+    border-radius: 20px;
     position: relative;
     border: 4px solid var(--progress-bar-border);
 }

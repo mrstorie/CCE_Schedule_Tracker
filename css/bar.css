@@ -106,6 +106,7 @@ body {
      /*background: rgba(117, 24,7,0.75);
     color: #FFAB0D;*/
     border-radius: 1000px;
+box-shadow: 0px 0px 10px black;
     text-align: center;
     font-size: 5vw;
     font-weight: bold;

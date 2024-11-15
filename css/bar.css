@@ -106,7 +106,7 @@ body {
      /*background: rgba(117, 24,7,0.75);
     color: #FFAB0D;*/
     border-radius: 1000px;
-box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 15px -3px black;
     text-align: center;
     font-size: 5vw;
     font-weight: bold;
@@ -186,7 +186,7 @@ box-shadow: 0px 0px 10px black;
     animation: gradient var(--progress-bar-animation-length) infinite;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-border-box: 0px 0px 30px -5px white;
+box-shadow: 0px 0px 20px -5px white;
 }
 
 .progress_time {

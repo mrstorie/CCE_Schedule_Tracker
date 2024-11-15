@@ -186,6 +186,7 @@ box-shadow: 0px 0px 10px black;
     animation: gradient var(--progress-bar-animation-length) infinite;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+border-box: 0px 0px 30px -5px white;
 }
 
 .progress_time {

@@ -181,7 +181,8 @@ body {
 }
 
 .progress_bar {
-    width: 10%;
+    width: 50%;
+transition: width 0.3s ease;
     height: 100%;
     color: var(--progress-bar-text-color);
     font-family: var(--font-family);

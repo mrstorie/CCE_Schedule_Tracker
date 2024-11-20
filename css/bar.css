@@ -23,7 +23,7 @@
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
     /* NO SERIF */
 
-    --background: linear-gradient(70deg, #01401E, #B19539);
+    --background: linear-gradient(70deg, #ac4c10, #7e590f);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
@@ -33,9 +33,9 @@
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: #007d3b;
+    --progress-bar-color-1: #ac4c10;
 
-    --progress-bar-color-2: #d2b246;
+    --progress-bar-color-2: #c6a437;
 
     --progress-bar-background: rgba(0, 0, 0, 0.5);
 

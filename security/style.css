@@ -29,7 +29,11 @@ p#current-time {
     font-family: 'DM Mono', monospace;
     font-size: 60px;
     padding: 0;
-    margin: 10px 0px 30px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+p#current-date {
+    margin: 5px 0px 30px 0px;
 }
 
 div.weather, div.schedule {

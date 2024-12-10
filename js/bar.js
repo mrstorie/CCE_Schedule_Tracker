@@ -291,5 +291,5 @@ function reloadPage(hour){
 
 window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(getSchedules, 1000*60*60*24);
-reloadPage(6)
+reloadPage(6);
 reloadPage(7);

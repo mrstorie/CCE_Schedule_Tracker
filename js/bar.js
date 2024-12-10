@@ -195,7 +195,7 @@ function dateSchedule(){
 
 case 2://Tuesday (delayed)
 		schedule[0] = new Schedule("7:00;Good Morning!;9:00,9:00;Eagle Time;9:30,9:30;Passing Period;9:35,9:35;Period 5;11:05,11:05;A Lunch;11:40,11:45; Period 6;13:15,13:20;Period 7;14:50");
-		schedule[1] = new Schedule("10:56;Passing Period;11:01,11:01;Period 6;12:35,12:35;B Lunch;13:11");
+		schedule[1] = new Schedule("11:05;Passing Period;11:10,11:10;Period 6;12:40,12:40;B Lunch;13:15");
 		break;
 
 

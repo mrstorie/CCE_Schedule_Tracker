@@ -2,6 +2,10 @@ var cancelProgress = "norm";
 console.log(cancelProgress);
 
 class ProgressBar {
+	var cancelProgress = "norm";
+	console.log(cancelProgress);
+
+	
     constructor(bar, statusText, container, title, schedule){
         this.bar = bar;
         this.container = container;

@@ -300,7 +300,7 @@ reloadPage(7);
 
 
 
-const devLink = "https://script.google.com/macros/s/AKfycbwNZsCgOThh_biYBpS__S3WQ_sCS6NJQp-ueiGWtgIIMnr0_uXkmcIULpnWI_Ulbh8idw/exec";
+const devLink = "https://script.google.com/macros/s/AKfycbxh9k3BgZ7p2qaY6cqjS5DWKMDyia9_Y5PmcVPIACRuaIdVfZGJ2nASwhhZ88uHjsG-EA/exec";
 
   async function checkSheet() {
     const response = await fetch(devLink); // Replace with your Google Apps Script URL

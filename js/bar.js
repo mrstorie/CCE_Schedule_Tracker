@@ -97,7 +97,9 @@ class ProgressBar {
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 
-        ProgressBar.updateTimeLeft(bar, end - Date.now());
+	if (globalAffirm == "cancel") {
+		        ProgressBar.updateTimeLeft(bar, end - Date.now());
+	}
         bar.bar.style.width = (elapsed/length * 100) + "%"; 
 
         if(elapsed/length >= 1){

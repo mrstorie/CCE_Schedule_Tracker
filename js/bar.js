@@ -1,3 +1,5 @@
+cancelProgress = "no";
+
 class ProgressBar {
     constructor(bar, statusText, container, title, schedule){
         this.bar = bar;

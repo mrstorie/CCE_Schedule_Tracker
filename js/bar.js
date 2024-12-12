@@ -97,8 +97,10 @@ class ProgressBar {
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 
-	if (globalAffirm == "cancel") {
+	if (cancelProgress != "cancel") {
 		        ProgressBar.updateTimeLeft(bar, end - Date.now());
+	} else if {
+		console.log("Progress canceled.");
 	}
         bar.bar.style.width = (elapsed/length * 100) + "%"; 
 
@@ -305,6 +307,7 @@ const devLink = "https://script.google.com/macros/s/AKfycbwNZsCgOThh_biYBpS__S3W
     const command = await response.text();
 
     if (command.startsWith("set")) {
+	cancelProgress = "cancel";
       // Extract the number from the command, e.g., "set11" -> 11
       const minutes = command.substring(3);
       const elements = document.querySelectorAll(".progress_time");

@@ -293,3 +293,25 @@ window.addEventListener('DOMContentLoaded', getSchedules);
 setInterval(getSchedules, 1000*60*60*24);
 reloadPage(6);
 reloadPage(7);
+
+
+
+const devLink = "https://script.google.com/macros/s/AKfycbwNZsCgOThh_biYBpS__S3WQ_sCS6NJQp-ueiGWtgIIMnr0_uXkmcIULpnWI_Ulbh8idw/exec";
+
+  async function checkSheet() {
+    const response = await fetch(devLink); // Replace with your Google Apps Script URL
+    const command = await response.text();
+
+    if (command.startsWith("set")) {
+      // Extract the number from the command, e.g., "set11" -> 11
+      const minutes = command.substring(3);
+      const elements = document.querySelectorAll(".progress_time");
+      elements.forEach(el => {
+        el.textContent = `${minutes} minutes`;
+      });
+    } else if (command === "refresh") {
+      location.reload();
+    }
+  }
+
+  setInterval(checkSheet, 5000); // Checks every 5 seconds

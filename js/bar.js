@@ -1,4 +1,5 @@
-cancelProgress = "no";
+var cancelProgress = "norm";
+console.log(cancelProgress);
 
 class ProgressBar {
     constructor(bar, statusText, container, title, schedule){
@@ -99,7 +100,7 @@ class ProgressBar {
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 
-	if (cancelProgress != "cancel") {
+	if (cancelProgress == "norm") {
 		        ProgressBar.updateTimeLeft(bar, end - Date.now());
 	} else if {
 		console.log("Progress canceled.");

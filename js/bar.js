@@ -2,7 +2,7 @@ var cancelProgress = "norm";
 console.log(cancelProgress);
 
 class ProgressBar {
-	var cancelProgress = "norm";
+	cancelProgress = "norm";
 	console.log(cancelProgress);
 
 	

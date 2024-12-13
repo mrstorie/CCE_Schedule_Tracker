@@ -323,8 +323,8 @@ if (command.startsWith("set")) {
   elements.forEach(el => {
     el.textContent = value;
   });
-} else if (command.startsWith("style.back")) { // Missing closing parenthesis fixed here
-  const value = command.substring(11);
+} else if (command.startsWith(".back")) { // Missing closing parenthesis fixed here
+  const value = command.substring(6);
   document.body.style.background = value;
 } else if (command === "refresh") {
   location.reload();

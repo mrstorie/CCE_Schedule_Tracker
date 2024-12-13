@@ -316,11 +316,19 @@ const devLink = "https://script.google.com/macros/s/AKfycbwXkuEQVGKb4jCzP_fyWsza
       elements.forEach(el => {
         el.textContent = `${minutes} minutes`;
       });
+    } else if (command.startsWith("custom")) {
+	cancelProgress = "cancel";
+      const value = command.substring(6);
+      const elements = document.querySelectorAll(".progress_time");
+      elements.forEach(el => {
+        el.textContent = value;
+      });
+	    
     } else if (command === "refresh") {
       location.reload();
     } else if (command === "normal") {
       cancelProgress = "norm";
-  }
+    }
  }
 
   setInterval(checkSheet, 5000); // Checks every 5 seconds

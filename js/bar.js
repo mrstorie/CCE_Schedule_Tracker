@@ -331,6 +331,7 @@ if (command.startsWith("set")) {
 } else if (command === "normal") {
   cancelProgress = "norm";
 }
+  }
 
 
   setInterval(checkSheet, 5000); // Checks every 5 seconds

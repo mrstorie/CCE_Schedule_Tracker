@@ -336,7 +336,9 @@ async function checkSheet() {
     cancelProgress = "norm";
 
   } else if (command === ".reset") {
-    // TODO
+    const progressBar = document.querySelector(".progress_bar");
+    progressBar.style.animationDuration = "";
+    document.body.style.background = "";
 
   } else if (command.startsWith(".anim-length")) {
     const value = command.substring(13);

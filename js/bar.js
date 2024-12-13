@@ -1,6 +1,7 @@
+console.log("1");
 
 class ProgressBar {
-
+	console.log("4");
 	
     constructor(bar, statusText, container, title, schedule){
         this.bar = bar;

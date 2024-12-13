@@ -321,5 +321,6 @@ const devLink = "https://script.google.com/macros/s/AKfycbwXkuEQVGKb4jCzP_fyWsza
     } else if (command === "normal") {
       cancelProgress = "norm";
   }
+ }
 
   setInterval(checkSheet, 5000); // Checks every 5 seconds

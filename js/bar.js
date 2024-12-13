@@ -304,34 +304,45 @@ reloadPage(7);
 
 const devLink = "https://script.google.com/macros/s/AKfycbwXkuEQVGKb4jCzP_fyWszaHTQ5cu3GQ1t_t8oOnZxthUvOA46gDeL7i5JqO2zKQ1dOFA/exec";
 
-  async function checkSheet() {
-    const response = await fetch(devLink); // Replace with your Google Apps Script URL
-    const command = await response.text();
+async function checkSheet() {
+  const response = await fetch(devLink); // Replace with your Google Apps Script URL
+  const command = await response.text();
 
-if (command.startsWith("set")) {
-  cancelProgress = "cancel";
-  // Extract the number from the command, e.g., "set11" -> 11
-  const minutes = command.substring(4);
-  const elements = document.querySelectorAll(".progress_time");
-  elements.forEach(el => {
-    el.textContent = `${minutes} minutes`;
-  });
-} else if (command.startsWith("custom")) {
-  cancelProgress = "cancel";
-  const value = command.substring(7);
-  const elements = document.querySelectorAll(".progress_time");
-  elements.forEach(el => {
-    el.textContent = value;
-  });
-} else if (command.startsWith(".back")) { // Missing closing parenthesis fixed here
-  const value = command.substring(6);
-  document.body.style.background = value;
-} else if (command === "refresh") {
-  location.reload();
-} else if (command === "normal") {
-  cancelProgress = "norm";
-}
+  if (command.startsWith("set")) {
+    cancelProgress = "cancel";
+    // Extract the number from the command, e.g., "set11" -> 11
+    const minutes = command.substring(4);
+    const elements = document.querySelectorAll(".progress_time");
+    elements.forEach(el => {
+      el.textContent = `${minutes} minutes`;
+    });
+
+  } else if (command.startsWith("custom")) {
+    cancelProgress = "cancel";
+    const value = command.substring(7);
+    const elements = document.querySelectorAll(".progress_time");
+    elements.forEach(el => {
+      el.textContent = value;
+    });
+
+  } else if (command.startsWith(".back")) { // Missing closing parenthesis fixed here
+    const value = command.substring(6);
+    document.body.style.background = value;
+
+  } else if (command === "refresh") {
+    location.reload();
+
+  } else if (command === "normal") {
+    cancelProgress = "norm";
+
+  } else if (command === ".reset") {
+    // TODO
+
+  } else if (command.startsWith(".anim-length")) {
+    const value = command.substring(13);
+    const elements = document.querySelector(".progress_bar");
+    elements.style.animationDuration = value;
   }
-
+}
 
   setInterval(checkSheet, 3000); // Checks every 3 seconds

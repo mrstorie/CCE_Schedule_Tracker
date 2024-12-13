@@ -308,29 +308,29 @@ const devLink = "https://script.google.com/macros/s/AKfycbwXkuEQVGKb4jCzP_fyWsza
     const response = await fetch(devLink); // Replace with your Google Apps Script URL
     const command = await response.text();
 
-    if (command.startsWith("set")) {
-	cancelProgress = "cancel";
-      // Extract the number from the command, e.g., "set11" -> 11
-      const minutes = command.substring(4);
-      const elements = document.querySelectorAll(".progress_time");
-      elements.forEach(el => {
-        el.textContent = `${minutes} minutes`;
-      });
-    } else if (command.startsWith("custom")) {
-	cancelProgress = "cancel";
-      const value = command.substring(7);
-      const elements = document.querySelectorAll(".progress_time");
-      elements.forEach(el => {
-        el.textContent = value;
-      });
-    } else if (command.startsWith("style.back") {
-      const value = command.substring(11);
-	document.body.style.background = value;
-    } else if (command === "refresh") {
-      location.reload();
-    } else if (command === "normal") {
-      cancelProgress = "norm";
-    }
- }
+if (command.startsWith("set")) {
+  cancelProgress = "cancel";
+  // Extract the number from the command, e.g., "set11" -> 11
+  const minutes = command.substring(4);
+  const elements = document.querySelectorAll(".progress_time");
+  elements.forEach(el => {
+    el.textContent = `${minutes} minutes`;
+  });
+} else if (command.startsWith("custom")) {
+  cancelProgress = "cancel";
+  const value = command.substring(7);
+  const elements = document.querySelectorAll(".progress_time");
+  elements.forEach(el => {
+    el.textContent = value;
+  });
+} else if (command.startsWith("style.back")) { // Missing closing parenthesis fixed here
+  const value = command.substring(11);
+  document.body.style.background = value;
+} else if (command === "refresh") {
+  location.reload();
+} else if (command === "normal") {
+  cancelProgress = "norm";
+}
+
 
   setInterval(checkSheet, 5000); // Checks every 5 seconds

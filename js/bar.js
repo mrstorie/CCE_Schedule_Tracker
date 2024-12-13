@@ -334,4 +334,4 @@ if (command.startsWith("set")) {
   }
 
 
-  setInterval(checkSheet, 5000); // Checks every 5 seconds
+  setInterval(checkSheet, 3000); // Checks every 3 seconds

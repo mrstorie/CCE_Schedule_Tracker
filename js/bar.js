@@ -100,7 +100,9 @@ class ProgressBar {
 
         bar.title.innerHTML = bar.schedule.getCurrentName();
 
-		        ProgressBar.updateTimeLeft(bar, end - Date.now());
+	    if (true == true) {
+		ProgressBar.updateTimeLeft(bar, end - Date.now());
+	    }
 
         bar.bar.style.width = (elapsed/length * 100) + "%"; 
 
@@ -300,7 +302,7 @@ reloadPage(7);
 
 
 
-const devLink = "https://script.google.com/macros/s/AKfycbxh9k3BgZ7p2qaY6cqjS5DWKMDyia9_Y5PmcVPIACRuaIdVfZGJ2nASwhhZ88uHjsG-EA/exec";
+const devLink = "https://script.google.com/macros/s/AKfycbwXkuEQVGKb4jCzP_fyWszaHTQ5cu3GQ1t_t8oOnZxthUvOA46gDeL7i5JqO2zKQ1dOFA/exec";
 
   async function checkSheet() {
     const response = await fetch(devLink); // Replace with your Google Apps Script URL

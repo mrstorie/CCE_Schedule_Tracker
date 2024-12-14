@@ -368,7 +368,7 @@ async function checkSheet() {
     elements.style.animationDuration = value;
 
   } else if (command === "id show") {
-      document.querySelector(".id-wrap").style.display = "block";
+      document.querySelector(".id-wrap").style.display = "flex";
 
   } else if (command === "id hide") {
       document.querySelector(".id-wrap").style.display = "none";
@@ -380,7 +380,7 @@ async function checkSheet() {
   } else if (command.startsWith("id showonly")) {
     const value = command.substring(12);
     if (value === deviceId) {
-      document.querySelector(".id-wrap").style.display = "block";
+      document.querySelector(".id-wrap").style.display = "flex";
     }
 
   } else if (command.startsWith("id hideonly")) {

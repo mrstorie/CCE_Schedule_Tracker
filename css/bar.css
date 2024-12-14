@@ -277,7 +277,7 @@ div.id-wrap {
     display: flex;
     align-items: center;
 	justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
 	display: none;
 	position: fixed;
 	top: 0;
@@ -285,7 +285,7 @@ div.id-wrap {
 }
 
 p#identification {
-	font-size: 70px;
+	font-size: 200px;
 	color: white;
 	font-family: 'DM Mono', monospace;
 }

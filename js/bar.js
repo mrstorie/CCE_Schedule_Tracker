@@ -428,6 +428,7 @@ async function checkSheet() {
     if (id === deviceId) {
       document.body.style.background = backgroundValue;
     }
+  }
 
   document.getElementById("identification").textContent = deviceId;
 }

@@ -314,10 +314,6 @@ if (!deviceId) {
   localStorage.setItem("deviceId", deviceId);
 }
 
-console.log(document.getElementById("identification"));
-console.log(document.getElementById("identification").textContent);
-document.getElementById("identification").textContent = deviceId;
-
 function testSystem(req) {
   if (req == deviceId) {
     document.body.style.background = "green";

@@ -279,10 +279,13 @@ div.id-wrap {
 	justify-content: center;
     background: rgba(0, 0, 0, 0.25);
 	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 p#identification {
 	font-size: 70px;
 	color: white;
 	font-family: 'DM Mono', monospace;
-		}
+}

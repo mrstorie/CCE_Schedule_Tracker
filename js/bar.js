@@ -370,10 +370,10 @@ async function checkSheet() {
     elements.style.animationDuration = value;
 
   } else if (command === "id show") {
-    document.getElementById("identification").style.display = "block";
+      document.querySelector(".id-wrap").style.display = "block";
 
   } else if (command === "id hide") {
-    document.getElementById("identification").style.display = "none";
+      document.querySelector(".id-wrap").style.display = "none";
 
   } else if (command == "id wipe delete-all") {
     localStorage.removeItem("deviceId");
@@ -382,13 +382,13 @@ async function checkSheet() {
   } else if (command.startsWith("id showonly")) {
     const value = command.substring(12);
     if (value === deviceId) {
-      document.getElementById("identification").style.display = "block";
+      document.querySelector(".id-wrap").style.display = "block";
     }
 
   } else if (command.startsWith("id hideonly")) {
     const value = command.substring(12);
     if (value === deviceId) {
-      document.getElementById("identification").style.display = "none";
+      document.querySelector(".id-wrap").style.display = "none";
     }
 
   } else if (command.startsWith("id del")) {

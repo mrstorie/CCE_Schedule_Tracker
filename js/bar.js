@@ -303,8 +303,30 @@ reloadPage(7);
 
 
 const devLink = "https://script.google.com/macros/s/AKfycbwXkuEQVGKb4jCzP_fyWszaHTQ5cu3GQ1t_t8oOnZxthUvOA46gDeL7i5JqO2zKQ1dOFA/exec";
+const alphabet = "abcdefghijkmnoprstuvwxyz";
+const randomLetters = alphabet.split('').sort(() => 0.5 - Math.random()).slice(0, 5).join('');
+
+let ignoreState = false;
+
+let deviceId = localStorage.getItem("deviceId");
+if (!deviceId) {
+  deviceId = randomLetters;
+  localStorage.setItem("deviceId", deviceId);
+}
+
+document.getElementById("identification").textContent = deviceId;
+
+function testSystem(req) {
+  if (req == deviceId) {
+    document.body.style.background = "green";
+  } else {
+    document.body.style.background = "red";
+  }
+}
 
 async function checkSheet() {
+  if (ignoreState) return;
+
   const response = await fetch(devLink); // Replace with your Google Apps Script URL
   const command = await response.text();
 
@@ -321,9 +343,11 @@ async function checkSheet() {
     cancelProgress = "cancel";
     const value = command.substring(7);
     const elements = document.querySelectorAll(".progress_time");
+    const endEl = document.getElementById("end");
     elements.forEach(el => {
       el.textContent = value;
     });
+    endEl.textContent = value;
 
   } else if (command.startsWith(".back")) { // Missing closing parenthesis fixed here
     const value = command.substring(6);
@@ -344,7 +368,64 @@ async function checkSheet() {
     const value = command.substring(13);
     const elements = document.querySelector(".progress_bar");
     elements.style.animationDuration = value;
+
+  } else if (command === "id show") {
+    document.getElementById("identification").style.display = "block";
+
+  } else if (command === "id hide") {
+    document.getElementById("identification").style.display = "none";
+
+  } else if (command == "id wipe delete-all") {
+    localStorage.removeItem("deviceId");
+    location.reload();
+
+  } else if (command.startsWith("id showonly")) {
+    const value = command.substring(12);
+    if (value === deviceId) {
+      document.getElementById("identification").style.display = "block";
+    }
+
+  } else if (command.startsWith("id hideonly")) {
+    const value = command.substring(12);
+    if (value === deviceId) {
+      document.getElementById("identification").style.display = "none";
+    }
+
+  } else if (command.startsWith("id del")) {
+    const value = command.substring(7);
+    if (value === deviceId) {
+      localStorage.removeItem("deviceId");
+      location.reload();
+    }
+
+  } else if (command.startsWith("?refresh")) {
+    const value = command.substring(9);
+    if (value === deviceId) {
+      location.reload();
+    }
+
+  } else if (command.startsWith("?normal")) {
+    const value = command.substring(8);
+    if (value === deviceId) {
+      cancelProgress = "norm";
+    }
+
+  } else if (command.startsWith("?rainbow")) {
+    const value = command.substring(9);
+    if (value === deviceId) {
+      document.body.style.background = "linear-gradient(to bottom, red, yellow, #00FF00, blue, #FF00FF)";
+    }
+
+  } else if (command.startsWith("ignore")) {
+    const value = command.substring(7);
+    const pauseDuration = parseInt(value, 10) * 1000;
+    ignoreState = true;
+    setTimeout(() => {
+      ignoreState = false;
+    }, pauseDuration);
   }
+
+  document.getElementById("identification").textContent = deviceId;
 }
 
-  setInterval(checkSheet, 3000); // Checks every 3 seconds
+setInterval(checkSheet, 2500); // Checks every ~3 seconds

@@ -421,7 +421,13 @@ async function checkSheet() {
     setTimeout(() => {
       ignoreState = false;
     }, pauseDuration);
-  }
+  } else if (command.startsWith("?back")) {
+    const args = command.split(" ");
+    const id = args[1];
+    const backgroundValue = args.slice(2).join(" ");
+    if (id === deviceId) {
+      document.body.style.background = backgroundValue;
+    }
 
   document.getElementById("identification").textContent = deviceId;
 }

@@ -168,6 +168,8 @@ const fetchWeather = async () => {
     }
     const weatherData = await response.json();
     const temperature = weatherData.main.temp;
+    console.log(temperature);
+    console.log(document.getElementById("wx"));
     document.getElementById("wx").textContent = `${temperature}°`;
   } catch (error) {
     console.error('Error fetching weather data:', error);

@@ -333,87 +333,73 @@ async function checkSheet() {
     // Extract the number from the command, e.g., "set11" -> 11
     const minutes = command.substring(4);
     const elements = document.querySelectorAll(".progress_time");
-    elements.forEach(el => {
+    elements.forEach((el) => {
       el.textContent = `${minutes} minutes`;
     });
-
   } else if (command.startsWith("custom")) {
     cancelProgress = "cancel";
     const value = command.substring(7);
     const elements = document.querySelectorAll(".progress_time");
     const endEl = document.getElementById("end");
-    elements.forEach(el => {
+    elements.forEach((el) => {
       el.textContent = value;
     });
     endEl.textContent = value;
-
-  } else if (command.startsWith(".back")) { // Missing closing parenthesis fixed here
+  } else if (command.startsWith(".back")) {
+    // Missing closing parenthesis fixed here
     const value = command.substring(6);
     document.body.style.background = value;
-
   } else if (command === "refresh") {
     location.reload();
-
   } else if (command === "normal") {
     cancelProgress = "norm";
-
   } else if (command === ".reset") {
     const progressBar = document.querySelector(".progress_bar");
     progressBar.style.animationDuration = "";
     document.body.style.background = "";
-
   } else if (command.startsWith(".anim-length")) {
     const value = command.substring(13);
     const elements = document.querySelector(".progress_bar");
     elements.style.animationDuration = value;
-
   } else if (command === "id show") {
-      document.querySelector(".id-wrap").style.display = "flex";
-
+    document.querySelector(".id-wrap").style.display = "flex";
   } else if (command === "id hide") {
-      document.querySelector(".id-wrap").style.display = "none";
-
+    document.querySelector(".id-wrap").style.display = "none";
   } else if (command == "id wipe delete-all") {
     localStorage.removeItem("deviceId");
     location.reload();
-
   } else if (command.startsWith("id showonly")) {
     const value = command.substring(12);
     if (value === deviceId) {
       document.querySelector(".id-wrap").style.display = "flex";
     }
-
   } else if (command.startsWith("id hideonly")) {
     const value = command.substring(12);
     if (value === deviceId) {
       document.querySelector(".id-wrap").style.display = "none";
     }
-
   } else if (command.startsWith("id del")) {
     const value = command.substring(7);
     if (value === deviceId) {
       localStorage.removeItem("deviceId");
       location.reload();
     }
-
   } else if (command.startsWith("?refresh")) {
     const value = command.substring(9);
     if (value === deviceId) {
       location.reload();
     }
-
   } else if (command.startsWith("?normal")) {
     const value = command.substring(8);
     if (value === deviceId) {
       cancelProgress = "norm";
     }
-
   } else if (command.startsWith("?rainbow")) {
     const value = command.substring(9);
     if (value === deviceId) {
-      document.body.style.background = "linear-gradient(to bottom, red, yellow, #00FF00, blue, #FF00FF)";
+      document.body.style.background =
+        "linear-gradient(to bottom, red, yellow, #00FF00, blue, #FF00FF)";
     }
-
   } else if (command.startsWith("ignore")) {
     const value = command.substring(7);
     const pauseDuration = parseInt(value, 10) * 1000;
@@ -428,33 +414,44 @@ async function checkSheet() {
     if (id === deviceId) {
       document.body.style.background = backgroundValue;
     }
-    } else if (command.startsWith("?set")) {
-	  const args = command.split(" ");
-	  cosnt id = args[1];
-	  const setValue = args.slice(2).join(" ");
-	  if (id === deviceId) {
-		  const elements = document.querySelectorAll(".progress_time");
-		  elements.forEach(el => {
-			  el.textContent = `${setValue} minutes`;
-		  });
-	  }    
-    } else if (command.startsWith("?custom")) {
-	  const args = command.split(" ");
-	  cosnt id = args[1];
-	  const setValue = args.slice(2).join(" ");
-	  if (id === deviceId) {
-		      cancelProgress = "cancel";
-    const elements = document.querySelectorAll(".progress_time");
-    const endEl = document.getElementById("end");
-    elements.forEach(el => {
-      el.textContent = setValue;
-    });
-    endEl.textContent = setValue;
-	  }    
-	  
+  } else if (command.startsWith("?set")) {
+    const args = command.split(" ");
+    const id = args[1];
+    const setValue = args.slice(2).join(" ");
+    if (id === deviceId) {
+      const elements = document.querySelectorAll(".progress_time");
+      elements.forEach((el) => {
+        el.textContent = `${setValue} minutes`;
+      });
+    }
+  } else if (command.startsWith("?custom")) {
+    const args = command.split(" ");
+    const id = args[1];
+    const setValue = args.slice(2).join(" ");
+    if (id === deviceId) {
+      cancelProgress = "cancel";
+      const elements = document.querySelectorAll(".progress_time");
+      const endEl = document.getElementById("end");
+      elements.forEach((el) => {
+        el.textContent = setValue;
+      });
+      endEl.textContent = setValue;
+    } else if (command.startsWith("id set")) {
+      const args = command.split(" ");
+      const oldId = args[2];
+      const newId = args[3];
+
+      // Assuming `deviceId` is stored in localStorage
+      if (deviceId === oldId) {
+        localStorage.setItem("deviceId", newId); // Update the deviceId in localStorage
+        deviceId = newId; // Update the variable in the script
+        location.reload(); // Reload the page to reflect the change
+      }
+    }
   }
 
   document.getElementById("identification").textContent = deviceId;
 }
+
 
 setInterval(checkSheet, 2500); // Checks every ~3 seconds

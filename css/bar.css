@@ -285,7 +285,7 @@ div.id-wrap {
 }
 
 p#identification {
-	font-size: 200px;
+	font-size: clamp(50px, 5vw, 200px);
 	color: white;
 	font-family: 'DM Mono', monospace;
 }

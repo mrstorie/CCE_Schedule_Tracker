@@ -328,6 +328,10 @@ async function checkSheet() {
   const response = await fetch(devLink); // Replace with your Google Apps Script URL
   const command = await response.text();
 	console.log(command);
+	console.assert(command.startsWith("id set"))
+	if (command.startsWith("id set") {
+	console.log("affirmative");
+	}
 
   if (command.startsWith("set")) {
     cancelProgress = "cancel";

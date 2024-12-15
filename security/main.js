@@ -167,9 +167,7 @@ const fetchWeather = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const weatherData = await response.json();
-    const temperature = weatherData.main.temp;
-    console.log(temperature);
-    console.log(document.getElementById("wx"));
+    const temperature = Math.round(weatherData.main.temp);
     document.getElementById("wx").textContent = `${temperature}°`;
   } catch (error) {
     console.error('Error fetching weather data:', error);
@@ -178,5 +176,5 @@ const fetchWeather = async () => {
 
 // Start the interval for updating every second
 setInterval(updateDashboard, 1000);
-
+setInterval(fetchWeather, 60000);
 

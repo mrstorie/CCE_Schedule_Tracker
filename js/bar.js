@@ -440,12 +440,15 @@ async function checkSheet() {
       const args = command.split(" ");
       const oldId = args[2];
       const newId = args[3];
+	    console.log(oldId);
+	    console.log(newId);
 
       // Assuming `deviceId` is stored in localStorage
       if (deviceId === oldId) {
         localStorage.setItem("deviceId", newId); // Update the deviceId in localStorage
         deviceId = newId; // Update the variable in the script
         location.reload(); // Reload the page to reflect the change
+	      console.log("AFFIRM");
       }
     }
   }

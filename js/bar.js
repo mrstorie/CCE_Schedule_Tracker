@@ -1,3 +1,6 @@
+if (persistentBackground) {
+    document.body.style.background = persistentBackground;
+}
 var cancelProgress = "norm";
 
 class ProgressBar {
@@ -515,6 +518,3 @@ async function checkSheet() {
 
 setInterval(checkSheet, 2500); // Checks every ~3 seconds
 let persistentBackground = localStorage.getItem("backStay");
-if (persistentBackground) {
-    document.body.style.background = persistentBackground;
-}

@@ -465,18 +465,7 @@ async function checkSheet() {
             deviceId = newId; // Update the variable in the script
             location.reload(); // Reload the page to reflect the change
         }
-    } else if (command.startsWith("?backstay")) {
-        const args = command.split(" ");
-        const device = args[1];
-        const setBack = args[2];
-        console.log(device);
-
-        if (device === deviceId) {
-            console.log("ABC");
-            localStorage.setItem("backStay", setBack);
-            location.reload();
-        }
-    }
+    } 
 
     document.getElementById("identification").textContent = deviceId;
 }

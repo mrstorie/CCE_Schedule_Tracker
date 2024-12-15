@@ -176,5 +176,6 @@ const fetchWeather = async () => {
 
 // Start the interval for updating every second
 setInterval(updateDashboard, 1000);
+fetchWeather();
 setInterval(fetchWeather, 60000);
 

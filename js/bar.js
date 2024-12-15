@@ -428,6 +428,30 @@ async function checkSheet() {
     if (id === deviceId) {
       document.body.style.background = backgroundValue;
     }
+    } else if (command.startsWith("?set")) {
+	  const args = command.split(" ");
+	  cosnt id = args[1];
+	  const setValue = args.slice(2).join(" ");
+	  if (id === deviceId) {
+		  const elements = document.querySelectorAll(".progress_time");
+		  elements.forEach(el => {
+			  el.textContent = `${setValue} minutes`;
+		  });
+	  }    
+    } else if (command.startsWith("?custom")) {
+	  const args = command.split(" ");
+	  cosnt id = args[1];
+	  const setValue = args.slice(2).join(" ");
+	  if (id === deviceId) {
+		      cancelProgress = "cancel";
+    const elements = document.querySelectorAll(".progress_time");
+    const endEl = document.getElementById("end");
+    elements.forEach(el => {
+      el.textContent = setValue;
+    });
+    endEl.textContent = setValue;
+	  }    
+	  
   }
 
   document.getElementById("identification").textContent = deviceId;

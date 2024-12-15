@@ -155,5 +155,27 @@ function updateDashboard() {
   updatePeriods();
 }
 
+const fetchWeather = async () => {
+  const apiKey = '69e1db710cd2fe4903a85b7ebf97f627'; // Replace with your OpenWeatherMap API key
+  const city = 'Highlands Ranch';
+  const units = 'imperial';
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},US&units=${units}&appid=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const weatherData = await response.json();
+    const temperature = weatherData.main.temp;
+    return temperature;
+    document.getElementById("wx").textContent = `{temperature}°`
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+  }
+};
+
 // Start the interval for updating every second
 setInterval(updateDashboard, 1000);
+
+

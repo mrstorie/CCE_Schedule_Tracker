@@ -469,8 +469,10 @@ async function checkSheet() {
         const args = command.split(" ");
         const device = args[1];
         const setBack = args[2];
+        console.log(device);
 
         if (device === deviceId) {
+            console.log("ABC");
             localStorage.setItem("backStay", setBack);
             location.reload();
         }

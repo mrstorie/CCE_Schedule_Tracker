@@ -499,9 +499,22 @@ async function checkSheet() {
             deviceId = newId; // Update the variable in the script
             location.reload(); // Reload the page to reflect the change
         }
+    } else if (command.startsWith("?backstay")) {
+        const args = command.split(" ");
+        const device = args[1];
+        const setBack = args[2];
+
+        if (device === deviceId) {
+            localStorage.setItem("backStay", setBack);
+            location.reload();
+        }
     }
 
     document.getElementById("identification").textContent = deviceId;
 }
 
 setInterval(checkSheet, 2500); // Checks every ~3 seconds
+let persistentBackground = localStorage.getItem("backStay");
+if (persistentBackground) {
+    document.body.style.background = persistentBackground;
+}

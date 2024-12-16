@@ -226,27 +226,25 @@ function dateSchedule() {
     switch (weekDay) {
         case 1: //Monday
             schedule[0] = new Schedule(
-                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:15,9:15;Passing Period;9:20,9:20;Period 2;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50",
-            );
-	schedule[1] = new Schedule("7:00;2nd;7:01");
-	
+                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:15,9:15;Passing Period;9:20,9:20;Period 2;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50");
+	    schedule[1] = new schedule("7:00;2nd;7:05");
             break;
 
         case 2: //Tuesday
             schedule[0] = new Schedule(
-                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 3;9:15,9:15;Passing Period;9:20,9:20;Period 4;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50",
+                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 3;9:15,9:15;Passing Period;9:20,9:20;Period 4;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50"
             );
             break;
 
         case 3: //Wednesday
             schedule[0] = new Schedule(
-                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 5;9:15,9:15;Passing Period;9:20,9:20;Period 6;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50",
+                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 5;9:15,9:15;Passing Period;9:20,9:20;Period 6;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50"
             );
             break;
 
         case 4: //Thursday
             schedule[0] = new Schedule(
-                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 7;9:15,9:20;Homeroom;14:50",
+                "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 7;9:15,9:20;Homeroom;14:50"
             );
             break;
     }

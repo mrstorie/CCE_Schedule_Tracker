@@ -228,6 +228,9 @@ function dateSchedule() {
         schedule[0] = new Schedule(
             "7:00;Good Luck!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:15,9:15;Passing Period;9:20,9:20;Period 2;10:50,10:50;Passing Period;10:55,10:55;Homeroom;12:30,12:30;Lunch;13:00,13:00;Homeroom;14:50"
         );
+        schedule[1] = new Schedule(
+            "19:30;Ignore;19:35"
+        );
 		break;
 
         case 2: //Tuesday

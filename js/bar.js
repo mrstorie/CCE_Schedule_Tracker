@@ -333,9 +333,9 @@ const randomLetters = alphabet
 
 let ignoreState = false;
 
-let idSetStatus = localStorage.getItem("idsetStatus");
-if (!idsetStatus) {
-    localStorage.setItem("idsetStatus", "false");
+let idSetStatus = localStorage.getItem("idSetStatus");
+if (!idSetStatus) {
+    localStorage.setItem("idSetStatus", "false");
 }
 
 let deviceId = localStorage.getItem("deviceId");

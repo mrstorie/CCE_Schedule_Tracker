@@ -468,7 +468,14 @@ async function checkSheet() {
             deviceId = newId; // Update the variable in the script
             location.reload(); // Reload the page to reflect the change
         }
-    } 
+    } else if (command === "refresh hard") {
+        window.location.href = window.location.href.split('?')[0] + '?v=' + new Date().getTime();
+    } else if (command.startsWith("refresh in")) {
+        const refreshTime = command.substring(13)
+        setTimeout( () => {
+            location.reload();
+        }, refreshTime);
+    }
 
     document.getElementById("identification").textContent = deviceId;
 }

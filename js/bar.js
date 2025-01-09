@@ -1,4 +1,8 @@
 var cancelProgress = "norm";
+let persistentBack = localStorage.getItem("persistentBack");
+if (!persistentBack) {
+    localStorage.setItem("idSetStatus", "false");
+}
 
 class ProgressBar {
     constructor(bar, statusText, container, title, schedule) {
@@ -371,6 +375,8 @@ if (!deviceId) {
     localStorage.setItem("deviceId", deviceId);
 }
 
+document.body.style.background = localStorage.getItem("persistentBack");
+
 function testSystem(req) {
     if (req == deviceId) {
         document.body.style.background = "green";
@@ -516,6 +522,14 @@ async function checkSheet() {
         idSetStatus = localStorage.getItem("idSetStatus");
         if (idSetStatus == "false") {
             document.querySelector(".id-wrap").style.display = "flex";
+        }
+    } else if (command.startsWith("?custom")) {
+        const args = command.split(" ");
+        const id = args[1];
+        const setValue = args.slice(2).join(" ");
+        if (id === deviceId) {
+            localStorage.setItem("persistentBack", setValue);
+            document.body.style.background = setValue;
         }
     }
 

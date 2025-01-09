@@ -375,7 +375,12 @@ if (!deviceId) {
     localStorage.setItem("deviceId", deviceId);
 }
 
-document.body.style.background = localStorage.getItem("persistentBack");
+document.addEventListener("DOMContentLoaded", function() {
+    let persistentBack = localStorage.getItem("persistentBack");
+    if (persistentBack) {
+        document.body.style.background = persistentBack;
+    }
+});
 
 function testSystem(req) {
     if (req == deviceId) {

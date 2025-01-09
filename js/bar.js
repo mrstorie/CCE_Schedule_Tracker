@@ -528,7 +528,7 @@ async function checkSheet() {
         if (idSetStatus == "false") {
             document.querySelector(".id-wrap").style.display = "flex";
         }
-    } else if (command.startsWith("?custom")) {
+    } else if (command.startsWith("?perback")) {
         const args = command.split(" ");
         const id = args[1];
         const setValue = args.slice(2).join(" ");

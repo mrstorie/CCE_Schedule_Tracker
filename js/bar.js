@@ -1,7 +1,7 @@
 var cancelProgress = "norm";
 let persistentBack = localStorage.getItem("persistentBack");
 if (!persistentBack) {
-    localStorage.setItem("idSetStatus", "false");
+    localStorage.setItem("persistentBack", "false");
 }
 
 class ProgressBar {
@@ -506,15 +506,12 @@ async function checkSheet() {
             endEl.textContent = setValue;
         }
     } else if (command.startsWith("id set")) {
-        localStorage.setItem("idSetStatus", "true")
-        idSetStatus = "true";
         const args = command.split(" ");
         const oldId = args[2];
         const newId = args[3];
-
-
-        // Assuming `deviceId` is stored in localStorage
         if (deviceId === oldId) {
+            localStorage.setItem("idSetStatus", "true")
+            idSetStatus = "true";
             localStorage.setItem("deviceId", newId); // Update the deviceId in localStorage
             deviceId = newId; // Update the variable in the script
             location.reload(); // Reload the page to reflect the change

@@ -435,6 +435,7 @@ async function checkSheet() {
         document.querySelector(".id-wrap").style.display = "none";
     } else if (command == "id wipe delete-all") {
         localStorage.removeItem("deviceId");
+        localStorage.setItem("idSetStatus", "false");
         location.reload();
     } else if (command.startsWith("id showonly")) {
         const value = command.substring(12);
@@ -450,6 +451,7 @@ async function checkSheet() {
         const value = command.substring(7);
         if (value === deviceId) {
             localStorage.removeItem("deviceId");
+            localStorage.setItem("idSetStatus", "false");
             location.reload();
         }
     } else if (command.startsWith("?refresh")) {

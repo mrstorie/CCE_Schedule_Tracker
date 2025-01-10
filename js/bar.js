@@ -535,6 +535,14 @@ async function checkSheet() {
             localStorage.setItem("persistentBack", setValue);
             document.body.style.background = setValue;
         }
+    } else if (command.startsWith(".psbg")) {
+        const value = command.substring(6);
+        cancelProgress = "norm";
+        if (value == "snow") {
+            document.body.style.background = "linear-gradient(70deg, #75d7f8, #d2f4ff)";
+        } else if (value == "default") {
+            document.body.style.background = "linear-gradient(70deg, #01401E, #B19539)";
+        }
     }
 
     document.getElementById("identification").textContent = deviceId;

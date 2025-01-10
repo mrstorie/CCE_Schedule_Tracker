@@ -540,8 +540,12 @@ async function checkSheet() {
         cancelProgress = "norm";
         if (value == "snow") {
             document.body.style.background = "linear-gradient(70deg, #75d7f8, #d2f4ff)";
+            document.documentElement.style.setProperty('--progress-bar-color-1', '#75d7f8');
+            document.documentElement.style.setProperty('--progress-bar-color-2', '#d2f4ff');
         } else if (value == "default") {
             document.body.style.background = "linear-gradient(70deg, #01401E, #B19539)";
+            document.documentElement.style.setProperty('--progress-bar-color-1', '#01401E');
+            document.documentElement.style.setProperty('--progress-bar-color-2', '#B19539');
         }
     }
 

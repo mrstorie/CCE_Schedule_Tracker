@@ -363,11 +363,14 @@ const randomLetters = alphabet
     .slice(0, 5)
     .join("");
 
-let ignoreState = false;
-
 let idSetStatus = localStorage.getItem("idSetStatus");
 if (!idSetStatus) {
     localStorage.setItem("idSetStatus", "false");
+}
+
+let ignoreState = localStorage.getItem("ignoreState");
+if (!ignoreState) {
+    localStorage.setItem("ignoreState", "false");
 }
 
 let deviceId = localStorage.getItem("deviceId");
@@ -392,7 +395,9 @@ function testSystem(req) {
 }
 
 async function checkSheet() {
-    if (ignoreState) return;
+    if (ignoreState == "true") {
+        return;
+    }
 
     const response = await fetch(devLink); // Replace with your Google Apps Script URL
     const command = await response.text();
@@ -475,8 +480,9 @@ async function checkSheet() {
         const value = command.substring(7);
         const pauseDuration = parseInt(value, 10) * 1000;
         ignoreState = true;
+        localStorage.setItem("ignoreState", "true");
         setTimeout(() => {
-            ignoreState = false;
+            localStorage.setItem("ignoreState", "false");
         }, pauseDuration);
     } else if (command.startsWith("?back")) {
         const args = command.split(" ");

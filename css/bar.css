@@ -46,6 +46,15 @@
     --names-color: rgb(255, 255, 255);
 }
 
+
+:root {
+    --wwpink: #EA7B8E;
+    --wwblue: #64CBDE;
+    --wwgreen: #97E0BD;
+    --wwyellow: #DEFD8D;
+}
+
+
 /* DO NOT EDIT BELOW THIS TEXT (UNLESS YOU KNOW WHAT YOU'RE DOING) */
 
 
@@ -265,7 +274,7 @@ transition: width 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: linear-gradient(to top right, var(--wwpink), var(--wwblue), var(--wwyellow));
     padding: 5px;
     border-radius: 6px;
     opacity: 0.85;

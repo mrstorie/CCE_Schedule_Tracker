@@ -36,7 +36,7 @@
 
     --background: url(/MVHS_Schedule_Tracker/images/flowers.png);
 
-    --text-background: rgba(0, 0, 0, 0.5);
+    --text-background: rgba(0, 0, 0, 0.7);
 
     --progress-bar-animation-length: 12s;
 
@@ -50,7 +50,7 @@
 
     --progress-bar-text-color: white;
 
-    --progress-bar-background: rgba(0, 0, 0, 0.5);
+    --progress-bar-background: rgba(0, 0, 0, 0.7);
 
     --progress-bar-border: #FFFFFF;
 

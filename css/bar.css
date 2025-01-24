@@ -41,11 +41,11 @@
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: var(--red);
+    --progress-bar-color-1: var(--wwred);
 
-    --progress-bar-color-2: var(--blue);
+    --progress-bar-color-2: var(--wwblue);
 
-    --progress-bar-color-3: var(--yellow);
+    --progress-bar-color-3: var(--wwyellow);
 
     --progress-bar-text-color: white;
 

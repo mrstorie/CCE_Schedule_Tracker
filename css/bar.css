@@ -15,7 +15,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 /* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */
- 
+
+
+:root {
+    --wwpink: #EA7B8E;
+    --wwblue: #64CBDE;
+    --wwgreen: #97E0BD;
+    --wwyellow: #DEFD8D;
+}
+
 :root {
     --text-color: #ffffff;
 
@@ -33,9 +41,11 @@
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: #007d3b;
+    --progress-bar-color-1: var(--red);
 
-    --progress-bar-color-2: #d2b246;
+    --progress-bar-color-2: var(--blue);
+
+    --progress-bar-color-3: var(--yellow);
 
     --progress-bar-text-color: white;
 
@@ -44,14 +54,6 @@
     --progress-bar-border: #FFFFFF;
 
     --names-color: rgb(255, 255, 255);
-}
-
-
-:root {
-    --wwpink: #EA7B8E;
-    --wwblue: #64CBDE;
-    --wwgreen: #97E0BD;
-    --wwyellow: #DEFD8D;
 }
 
 
@@ -198,7 +200,7 @@ transition: width 0.3s ease;
     height: 100%;
     color: var(--progress-bar-text-color);
     font-family: var(--font-family);
-    background: repeating-linear-gradient(90deg, var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-1));
+    background: repeating-linear-gradient(90deg, var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-3), var(--progress-bar-color-1));
     background-size: 200% auto;
     background-position: 0 100%;
     animation: gradient var(--progress-bar-animation-length) infinite;

@@ -222,7 +222,7 @@ transition: width 0.3s ease;
 
 #clock {
     color: var(--text-color);
-    font-family: var(--clock-font-family);
+    font-family: var(--clock-font-family) !important;
     font-size: 5vw;
     margin: 0;
 }

@@ -48,11 +48,11 @@
 
     --progress-bar-color-3: var(--wwyellow);
 
-    --progress-bar-text-color: white;
+    --progress-bar-text-color: black;
 
-    --progress-bar-background: rgba(0, 0, 0, 0.7);
+    --progress-bar-background: rgba(255, 255, 255, 0.75);
 
-    --progress-bar-border: #FFFFFF;
+    --progress-bar-border: #000000;
 
     --names-color: rgb(255, 255, 255);
 }
@@ -218,8 +218,8 @@ transition: width 0.3s ease;
     font-family: var(--font-family);
     font-weight: bold;
     font-size: 4vw;
-    text-shadow: 0px 0px 15px black; 
-    /* TEXT SHADOW IS TEMPORARY FOR WISH WEEK! REMOVE */
+/*     text-shadow: 0px 0px 15px black; 
+    /* TEXT SHADOW IS TEMPORARY FOR WISH WEEK! REMOVE */ */
 }
 
 #clock {

@@ -281,6 +281,7 @@ transition: width 0.3s ease;
     padding: 5px;
     border-radius: 6px;
     opacity: 0.85;
+    cursor: pointer;
 }
 
 div.id-wrap {

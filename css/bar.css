@@ -48,11 +48,11 @@
 
     --progress-bar-color-3: var(--wwyellow);
 
-    --progress-bar-text-color: black;
+    --progress-bar-text-color: white;
 
-    --progress-bar-background: rgba(255, 255, 255, 0.75);
+    --progress-bar-background: rgba(0, 0, 0, 0.7);
 
-    --progress-bar-border: #000000;
+    --progress-bar-border: #FFFFFF;
 
     --names-color: rgb(255, 255, 255);
 }

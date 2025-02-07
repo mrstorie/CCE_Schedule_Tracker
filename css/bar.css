@@ -19,38 +19,28 @@
 /* ONLY EDIT ABOVE THIS LINE TO ADD FONTS - EDIT BELOW THIS LINE TO UPDATE VARIABLES/STYLES */
 
 :root {
-    --wwpink: #EA7B8E;
-    --wwblue: #64CBDE;
-    --wwgreen: #97E0BD;
-    --wwyellow: #DEFD8D;
-}
-
-:root {
     --text-color: #ffffff;
 
-    --font-family: 'Short Stack', sans-serif;
+    --font-family: 'DM Sans', sans-serif;
 
     --clock-font-family: 'DM Mono', sans-serif;
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
-    /* NO SERIF */
 
-    --background: url(/MVHS_Schedule_Tracker/images/flowers.png);
+    --background: linear-gradient(70deg, #01401E, #B19539);
 
-    --text-background: rgba(0, 0, 0, 0.7);
+    --text-background: rgba(0, 0, 0, 0.5);
 
-    --progress-bar-animation-length: 12s;
+    --progress-bar-animation-length: 4.5s;
 
     --progress-bar-angle: to right;
 
-    --progress-bar-color-1: var(--wwpink);
+    --progress-bar-color-1: #007d3b;
 
-    --progress-bar-color-2: var(--wwblue);
-
-    --progress-bar-color-3: var(--wwyellow);
+    --progress-bar-color-2: #d2b246;
 
     --progress-bar-text-color: white;
 
-    --progress-bar-background: rgba(0, 0, 0, 0.7);
+    --progress-bar-background: rgba(0, 0, 0, 0.5);
 
     --progress-bar-border: #FFFFFF;
 
@@ -201,7 +191,7 @@ transition: width 0.3s ease;
     height: 100%;
     color: var(--progress-bar-text-color);
     font-family: var(--font-family);
-    background: repeating-linear-gradient(90deg, var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-3), var(--progress-bar-color-1));
+    background: repeating-linear-gradient(90deg, var(--progress-bar-color-1), var(--progress-bar-color-2), var(--progress-bar-color-1));
     background-size: 200% auto;
     background-position: 0 100%;
     animation: gradient var(--progress-bar-animation-length) infinite;

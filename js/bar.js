@@ -561,9 +561,10 @@ async function checkSheet() {
 setInterval(checkSheet, 2500); // Checks every ~3 seconds
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("qrcode") {
+    if (document.getElementById("qrcode")) {
         document.getElementById("qrcode").addEventListener("click", () => {
             window.open("https://austinkden.github.io/ww25", "_blank");
         })
     }
 })
+

@@ -67,6 +67,7 @@ body {
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
+    box-sizing: border-box;
     background-position: center center;
     overflow: hidden;
     margin: 0;

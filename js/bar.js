@@ -411,7 +411,7 @@ async function checkSheet() {
         const id = args[1];
         const setValue = args.slice(2).join(" ");
         if (id === deviceId) {
-            document.body.style.border = `${amount}px solid white`;
+            document.body.style.border = `${setValue}px solid white`;
         }
     }
 

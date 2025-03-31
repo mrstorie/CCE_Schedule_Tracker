@@ -406,6 +406,13 @@ async function checkSheet() {
     if (command.startsWith("ptest")) {
         const amount = command.substring(6);
         document.body.style.border = `${amount}px solid white`;
+    } else if (command.startsWith("?ptest")) {
+        const args = command.split(" ");
+        const id = args[1];
+        const setValue = args.slice(2).join(" ");
+        if (id === deviceId) {
+            document.body.style.border = `${amount}px solid white`;
+        }
     }
 
     if (command.startsWith("set")) {

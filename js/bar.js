@@ -581,3 +581,5 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 })
+
+// padding: top/bottom 16, left/right 28

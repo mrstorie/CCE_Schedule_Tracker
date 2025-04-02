@@ -403,6 +403,13 @@ async function checkSheet() {
     const response = await fetch(devLink); // Replace with your Google Apps Script URL
     const command = await response.text();
 
+    if (command.startsWith("redirect")) {
+        const wantedId = command.substring(9);
+        if (wantedId == deviceId) {
+            window.location.replace("https://csmvhs.github.io/schedule");
+        }
+    }
+
     if (command.startsWith("ptest")) {
         const amount = command.substring(6);
         document.body.style.border = `${amount}px solid white`;

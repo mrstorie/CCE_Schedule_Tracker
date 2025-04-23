@@ -26,7 +26,7 @@
     --clock-font-family: 'DM Mono', sans-serif;
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
 
-    --background: linear-gradient(70deg, #01401E, #B19539);
+    --background: linear-gradient(70deg, #d02a2a, #B19539);
 
     --text-background: rgba(0, 0, 0, 0.5);
 

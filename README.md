@@ -1,4 +1,4 @@
-## Official MVHS Schedule Tracker App
-[Website Link](https://csmvhs.github.io/MVHS_Schedule_Tracker/)
+## Official CCE Schedule Tracker App
+[Website Link](https://mrstorie.github.io/CCE_Schedule_Tracker/)
 
 For information on modifying the schedules, read guide.pdf.

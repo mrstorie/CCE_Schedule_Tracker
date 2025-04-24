@@ -255,7 +255,7 @@ function dateSchedule() {
            break;
 
 //         case 3://Wednesday (delayed)
-   //     	schedule[0] = new Schedule("9:00;Good Morning!;9:15,9:15;Period 1;10:25,10:25;Passing Period;10:30,10:30;Period 2;11:40,11:40;A Lunch;12:20,12:20;Passing Period;12:25,12:25;Period 3;13:35,13:35;Passing Period;13:40,13:40;Period 4;14:50");
+   //     	schedule[0] = new Schedule("9:00;Good Morning!;9:15,9:15;Period 1;10:25,10:25;Passing Period;10:30,10:30;Period 2;11:40,11:40;A Lunch;12:20,12:20;Passing Period;12:25,12:25;Period 3;13:35,13:35;Passing Period;13:40,13:40;1st grade;14:50");
  //       	schedule[1] = new Schedule("11:40;Passing Period;11:45,11:45;Period 3;12:55,12:55;B Lunch;13:35");
   //      	break;
 

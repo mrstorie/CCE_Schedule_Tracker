@@ -26,7 +26,7 @@
     --clock-font-family: 'DM Mono', sans-serif;
     /* This font should always remain DM Mono or another font that is very easy to read numbers in. */
 
-    --background: linear-gradient(70deg, #004f97, #8B0000);
+    --background: linear-gradient(70deg, #004f97, #004f97);
 
     --text-background: rgba(0, 0, 0, 0.5);
 
@@ -40,7 +40,7 @@
 
     --progress-bar-text-color: rgb(255, 255, 255);
 
-    --progress-bar-background: rgba(20, 126, 247, 0.99);
+    --progress-bar-background: rgba(9, 65, 129, 0.99);
 
     --progress-bar-border: #FFFFFF;
 

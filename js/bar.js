@@ -226,8 +226,8 @@ function dateSchedule() {
     switch (weekDay) {
         case 1: //Monday
            schedule[0] = new Schedule(
-               "7:00;Good Morning!;8:30,8:30;Teacher Office Hours;8:45,8:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50",
-           );
+              "8:00;Good Morning!;8:45,8:45;6th Grade;9:30,9:30;5th Grade;10:15,10:15;5 Minute Break;10:20,10:20;4th Grade;11:05,11:05;3rd Grade;11:50,11:50;Lunch;12:30,12:30;Plan;13:15,13:15;Kindie;13:55,13:55;5 Minute Break;14:00,14:00;1st Grade;14:40,14:40;5 Minute Break; 14:45,14:45;2nd Grade;15:25",
+            );
            break;
 
 
@@ -247,7 +247,7 @@ function dateSchedule() {
 
        case 3: //Wednesday
             schedule[0] = new Schedule(
-               "7:00;Good Morning!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;9:19,9:19;Passing Period;9:24,9:24;Period 2;10:58,10:58;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 3;13:11,13:11;Passing Period;13:16,13:16;Period 4;14:50",
+               "8:00;Good Morning!;8:45,8:45;6th Grade;9:30,9:30;5th Grade;10:15,10:15;5 Minute Break;10:20,10:20;4th Grade;11:05,11:05;3rd Grade;11:50,11:50;Lunch;12:30,12:30;Plan;13:15,13:15;Kindie;13:55,13:55;5 Minute Break;14:00,14:00;1st Grade;14:40,14:40;5 Minute Break; 14:45,14:45;2nd Grade;15:25",
             );
             schedule[1] = new Schedule(
                "10:58;Passing Period;11:03,11:03;Period 3;12:37,12:37;B Lunch;13:11",
@@ -261,7 +261,7 @@ function dateSchedule() {
 
         case 4: //Thursday
             schedule[0] = new Schedule(
-                "7:00;Good Morning!;7:30,7:30;Teacher PLC;8:05,8:05;Period 5;9:39,9:39;Homeroom;9:49,9:49;Eagle Time;10:56,10:56;A Lunch;11:32,11:32;Passing Period;11:37,11:37;Period 6;13:11,13:11;Passing Period;13:16,13:16;Kindie;14:50",
+               "8:00;Good Morning!;8:45,8:45;6th Grade;9:30,9:30;5th Grade;10:15,10:15;5 Minute Break;10:20,10:20;4th Grade;11:05,11:05;3rd Grade;11:50,11:50;Lunch;12:30,12:30;Plan;13:15,13:15;Kindie;13:55,13:55;5 Minute Break;14:00,14:00;1st Grade;14:40,14:40;5 Minute Break; 14:45,14:45;2nd Grade;15:25",
             );
             schedule[1] = new Schedule(
                 "10:56;Passing Period;11:01,11:01;Period 6;12:35,12:35;B Lunch;13:11",
@@ -273,8 +273,7 @@ function dateSchedule() {
         case 5: //Friday
          
             schedule[0] = new Schedule(
-              "7:00;Happy Friday!;7:30,7:30;Teacher Office Hours;7:45,7:45;Period 1;8:36,8:36;Passing Period;8:41,8:41;Period 2;9:32,9:32;Passing Period;9:37,9:37;Period 3;10:28,10:28;Passing Period;10:33,10:33;Period 4;11:24,11:24;A Lunch;12:02,12:02;Passing Period;12:07,12:07;Period 5;12:58,12:58;Passing Period;13:03,13:03;Period 6;13:54, 13:54;Passing Period;13:59,13:59;Period 7;14:50",
-    
+              "8:00;Good Morning!;8:45,8:45;6th Grade;9:30,9:30;5th Grade;10:15,10:15;5 Minute Break;10:20,10:20;4th Grade;11:05,11:05;3rd Grade;11:50,11:50;Lunch;12:30,12:30;Plan;13:15,13:15;Kindie;13:55,13:55;5 Minute Break;14:00,14:00;1st Grade;14:40,14:40;5 Minute Break; 14:45,14:45;2nd Grade;15:25",
             );
           schedule[1] = new Schedule(
                 "11:24;Passing Period;11:29,11:29;Period 5;12:20,12:20;B Lunch;12:58",

@@ -316,7 +316,7 @@ function getSchedules() {
 
         var schedule = [];
         schedule[0] = new Schedule(obj.schedules[index].times[0]);
-        //schedule[1] = new Schedule(obj.schedules[index].times[1]);
+        schedule[1] = new Schedule(obj.schedules[index].times[1]);
         startBar(schedule);
     };
 

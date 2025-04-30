@@ -384,12 +384,5 @@ function testSystem(req) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("qrcode")) {
-        document.getElementById("qrcode").addEventListener("click", () => {
-            window.open("https://austinkden.github.io/ww25", "_blank");
-        })
-    }
-})
 
 // padding: top/bottom 16, left/right 28

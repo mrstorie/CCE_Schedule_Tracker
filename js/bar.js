@@ -248,10 +248,7 @@ function dateSchedule() {
                "8:25;Good Morning!;8:45,8:45;6th Grade;9:30,9:30;5th Grade;10:15,10:15;5 Minute Break;10:20,10:20;4th Grade;11:05,11:05;3rd Grade;11:50,11:50;Lunch;12:30,12:30;Plan;13:15,13:15;Kindie;13:55,13:55;5 Minute Break;14:00,14:00;1st Grade;14:40,14:40;5 Minute Break; 14:45,14:45;2nd Grade;15:25",
            
            );
-             schedule[1] = new Schedule(
-               "8:25;Good Morning!;12:00,12:00;Happy Afternoon!;13:30,13:30;Have a Great Evening!;13:35,
-           
-           );
+             
            break;
 
 //         case 3://Wednesday (delayed)
